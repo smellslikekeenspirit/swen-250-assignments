@@ -1,0 +1,66 @@
+SWEN-250 Activity Reflection
+Database -- SQL Practice - Baseball Players
+
+Name: Prionti Nasir
+
+================================================================
+Query 1: Find all the information on all the catchers (position 2) in the database
+Estimated Time	00 10
+Plan: Look up syntax for writing queries, write the first one and test
+(Order of implementation, testing approach, etc.)
+
+Complete
+Actual Time	00 10
+Observations: It is very straightforward and easy to write queries
+(Lessons learned, problems encountered, obstacles overcome, etc.)
+
+
+================================================================
+Query 2: Find the name and age of all pitchers (position 1) on the Rays
+Estimated Time	00 05
+Plan: Write, test, debug
+(Order of implementation, testing approach, etc.)
+
+Complete
+Actual Time	00 05
+Observations: Relatively little effort required to come up with the logic for queries
+(Lessons learned, problems encountered, obstacles overcome, etc.)
+
+
+================================================================
+Query 3: Find the name, number, and team of all outfielders (positions 7 through 9) who are 25 years old or younger
+Estimated Time	00 05
+Plan: Write, test, debug
+(Order of implementation, testing approach, etc.)
+
+Complete
+Actual Time	00 05
+Observations: Had to look up some syntax, otherwise not very difficult
+(Lessons learned, problems encountered, obstacles overcome, etc.)
+
+
+================================================================
+Query 4: Find the name and number of all infielders (positions 3 through 6) on the Red Sox
+Estimated Time	00 05
+Plan: write, test, debug
+(Order of implementation, testing approach, etc.)
+
+Complete
+Actual Time	00 05
+Observations: straightforward and did not require debugging
+(Lessons learned, problems encountered, obstacles overcome, etc.)
+
+
+================================================================
+Query 5: Find the name, number, and team of all pitchers who are over 30 years old
+Estimated Time	00 05
+Plan: write, test, debug
+(Order of implementation, testing approach, etc.)
+
+Complete
+Actual Time	00 05
+Observations: straightforward and did not require debugging
+(Lessons learned, problems encountered, obstacles overcome, etc.)
+
+
+================================================================
