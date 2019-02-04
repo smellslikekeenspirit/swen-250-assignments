@@ -1,0 +1,18 @@
+commit bcd57c7aff0354f4eed5ef6ada898e41490bad33
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Jan 26 21:25:22 2014 -0600
+
+    Slight formatting changes on the PACMAN example to make it consistent with the others
+
+commit 71a71a31bbe84555fe79ae3873566b80e8bf5c26
+Author: Eugene Korbut <me@mvl.ru>
+Date:   Thu Jan 23 14:21:43 2014 +0700
+
+    Pacman-style progressbar
+
+commit d5d6e96fc60232acc5efc722472c9e9d3cd1bfbc
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Jan 26 21:18:16 2014 -0600
+
+    Version Bump to 1.4.1
+

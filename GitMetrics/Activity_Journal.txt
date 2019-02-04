@@ -1,0 +1,22 @@
+SWEN-250 Activity Reflection
+Ruby - Git Repository Metrics
+
+Name: Prionti Nasir
+
+================================================================
+Start
+Estimated Time	02 00
+Plan: Write, research when necessary (DateTime docs etc.), compile, debug, test
+(Order of implementation, testing approach, etc.)
+
+Complete
+Actual Time    03 00
+Observations:First two went smooth, third one I had a lot of trouble trying to
+parse with strptime until I realised DateTime.parse was specified in the webpage.
+Also, I realised oldDate - newDate + 1 gives a weird number if I don't convert 
+to integer using to_i.
+(Lessons learned, problems encountered, obstacles overcome, etc.)
+
+
+================================================================
+

@@ -1,0 +1,3139 @@
+commit e46d9732a0eb94c9890295ecde19fe004f56cf40
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Jan 26 21:34:35 2014 -0600
+
+    README Update
+
+commit 1dd3bb3bb2b1a0c8627a564f0f41be172cc3505b
+Merge: d5d6e96 bcd57c7
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Jan 26 21:31:12 2014 -0600
+
+    Merge branch 'vlmonk-pacman-style'
+    
+    * vlmonk-pacman-style:
+      Slight formatting changes on the PACMAN example to make it consistent with the others
+      Pacman-style progressbar
+
+commit bcd57c7aff0354f4eed5ef6ada898e41490bad33
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Jan 26 21:25:22 2014 -0600
+
+    Slight formatting changes on the PACMAN example to make it consistent with the others
+
+commit 71a71a31bbe84555fe79ae3873566b80e8bf5c26
+Author: Eugene Korbut <me@mvl.ru>
+Date:   Thu Jan 23 14:21:43 2014 +0700
+
+    Pacman-style progressbar
+
+commit d5d6e96fc60232acc5efc722472c9e9d3cd1bfbc
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Jan 26 21:18:16 2014 -0600
+
+    Version Bump to 1.4.1
+
+commit 2d5fc351579913804fbf3ef065db2fbc72edb0ec
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Jan 26 21:17:33 2014 -0600
+
+    Change from 'STDOUT.puts' to the more appropriate 'Kernel.warn'
+
+commit e296d9f3761ddcb221e834e431c2a2236def1dda
+Merge: 4ce4cd3 debbb9a
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Jan 26 21:11:28 2014 -0600
+
+    Merge branch 'jdelStrother-stopstart'
+    
+    * jdelStrother-stopstart:
+      Add another spec which tests this in a different way
+      Whitespace
+      Add an acceptance spec to mimic running fuubar with no specs
+      Makes Timer#stop a no-op unless it has first been started.
+
+commit debbb9accd400ed606397a1125caef254d6a0b2c
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Jan 26 21:11:21 2014 -0600
+
+    Add another spec which tests this in a different way
+
+commit 53b37101959f5526716d260c97139a3e883aa3d8
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Jan 26 21:10:39 2014 -0600
+
+    Whitespace
+
+commit d5a1641fa0a1c42d3880e5fe66aeaea393834698
+Author: Jonathan del Strother <jon.delStrother@audioboo.fm>
+Date:   Thu Jan 23 09:19:04 2014 +0000
+
+    Add an acceptance spec to mimic running fuubar with no specs
+
+commit 9d2ad3bf0d97a07404dc1892f73daa5ddc0719e6
+Author: Jonathan del Strother <jon.delStrother@audioboo.fm>
+Date:   Thu Jan 2 12:06:26 2014 +0000
+
+    Makes Timer#stop a no-op unless it has first been started.
+    
+    On running rspec with no examples, the elapsed timer would receive stop, then start, resulting in an error on trying to calculate @stopped_at - @started_at.
+
+commit 4ce4cd37e6fce7de909b60b5f3b87df8d6d4b7ba
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat Dec 28 19:22:25 2013 -0600
+
+    Version Bump to 1.4.0
+
+commit e2d04aeb0171ac221352a02241f08f2786163217
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat Dec 28 19:24:52 2013 -0600
+
+    Displaying the call stack was probably too much
+
+commit 03dbc3e55be98debcb44ad37c5d102d57d019e1d
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat Dec 28 18:04:49 2013 -0600
+
+    Upgrade fuubar
+
+commit ec6e632d51798285be5887cd06fee3334d04f780
+Merge: 2856613 95bde53
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat Dec 28 18:03:05 2013 -0600
+
+    Merge branch 'feature/add-specific-error-for-invalid-progress'
+    
+    * feature/add-specific-error-for-invalid-progress:
+      Add an error specifically for invalid progress so that, in parent libraries, it can be caught properly
+
+commit 95bde53378b555271b7fde7d9ba2e10000830de8
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat Dec 28 18:02:52 2013 -0600
+
+    Add an error specifically for invalid progress so that, in parent libraries, it can be caught properly
+
+commit 285661399caf6d78742f81fae72a9e818080b76e
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat Dec 28 17:54:03 2013 -0600
+
+    Use the splat operator just to be clear
+
+commit 18463b34b8cef26d20ad4a014a730aad908ffae7
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat Dec 28 17:53:45 2013 -0600
+
+    Fix an issue with the estimated timers blowing up if the total was nil - Closes #62
+
+commit db7e5f37ab129b8ff8e7f650280e94df023852dd
+Merge: 23f5535 592d4d8
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat Dec 28 17:36:30 2013 -0600
+
+    Merge branch 'bug/fix-incrementing-decrementing-bar-to-invalid-value' - #55
+    
+    * bug/fix-progress-change-while-bar-is-stopped:
+      Changed my mind. Rather than checking if the bar is stopped/started just blow up when the attempt is made to increment/decrement the bar to an invalid value
+      Remove the CannotUpdateStoppedBarError
+      Changes to the total should also be considered a change in progress and should therefore not be allowed for a stopped bar
+      Add a warning that any changes to progress while the bar is stopped, will eventually be an exception
+      Use the helper to divide the seconds.  Don't know why I didn't do this before
+      When finishing the bar, we also should stop the timers
+      When checking 'finished?' make sure we check all progressables
+      Always thought it was weird that the 'finished?' check was in the update method
+      Move the 'finished' logic into the progressable
+      Rather than specifying @elapsed_time explicitly, use the with_timers helper
+      Add a method to check to see whether the bar has been started
+      Extract logic for updating progress into a 'update_progress' method
+      Add placeholder for an Error which will be used in v2.0.0
+
+commit 592d4d844ddbaf7c5ef0bc9d6e2d89d18993504a
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat Dec 28 17:35:21 2013 -0600
+
+    Changed my mind. Rather than checking if the bar is stopped/started just blow up when the attempt is made to increment/decrement the bar to an invalid value
+
+commit 131e60c0a8e84b713497cdbf56c4d32fd796b692
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat Dec 28 17:34:26 2013 -0600
+
+    Remove the CannotUpdateStoppedBarError
+
+commit 068f843dd93003f943a79a5e83d01eb142b6b026
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat Dec 28 17:05:06 2013 -0600
+
+    Changes to the total should also be considered a change in progress and should therefore not be allowed for a stopped bar
+
+commit d9e5ff282cdf846f6e86df807deb99cc0fe081ee
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat Dec 28 17:02:18 2013 -0600
+
+    Add a warning that any changes to progress while the bar is stopped, will eventually be an exception
+
+commit b62fe90558956bd030100516b1975c2d33fc7096
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat Dec 28 16:55:39 2013 -0600
+
+    Use the helper to divide the seconds.  Don't know why I didn't do this before
+
+commit 32db331db9b6de6b5218b9dfd3cba1912ac94d10
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat Dec 28 16:53:33 2013 -0600
+
+    When finishing the bar, we also should stop the timers
+
+commit 12518a03972eeb8e6f4697d289568eaeda362b33
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat Dec 28 16:53:10 2013 -0600
+
+    When checking 'finished?' make sure we check all progressables
+    
+    This should probably be moved into some sort of helper. Maybe:
+    
+    progressables.all?(&:finished?)
+
+commit a0715cc2787fda20fba3e4eb9b4226b8fd797c52
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat Dec 28 16:51:12 2013 -0600
+
+    Always thought it was weird that the 'finished?' check was in the update method
+
+commit 106f944665108f62b81408d25a4d0d9bff5ae266
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat Dec 28 16:41:06 2013 -0600
+
+    Move the 'finished' logic into the progressable
+
+commit 0850699acd8e2c8c37e3b524708e20cc972ed09b
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat Dec 28 16:39:19 2013 -0600
+
+    Rather than specifying @elapsed_time explicitly, use the with_timers helper
+    
+    That way if we add more timers or whatever, we don't have to change this in multiple places
+
+commit daf3b5df5ca5039e40bb9a72858bf537e25ec17d
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat Dec 28 16:38:31 2013 -0600
+
+    Add a method to check to see whether the bar has been started
+
+commit e5c9f08ebfa3820119cb7b98312fd3c7e36f4980
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat Dec 28 16:37:43 2013 -0600
+
+    Extract logic for updating progress into a 'update_progress' method
+
+commit c9d4a5a6694541777ebdbdbd0cb38830df113a6b
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat Dec 28 16:36:41 2013 -0600
+
+    Add placeholder for an Error which will be used in v2.0.0
+
+commit 23f55354859e4e8192b35765d1c8b71cd2d79eec
+Merge: a726b4f 38f5a74
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Dec 15 13:22:41 2013 -0600
+
+    Merge branch 'development'
+    
+    * development:
+      Update the copyright in the README to 2014 (we're almost there :)
+      Add 'Zero dependencies' to the README as a beneifit of using ruby-progressbar
+
+commit 38f5a7484729c9cda1648f6f5fe76d6d271de8ff
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Dec 15 13:20:47 2013 -0600
+
+    Update the copyright in the README to 2014 (we're almost there :)
+
+commit a4e736ea269b96408ba7c80e279147ac51178b10
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Dec 15 13:12:08 2013 -0600
+
+    Add 'Zero dependencies' to the README as a beneifit of using ruby-progressbar
+
+commit 36cf8a5ba6b901b1e2b57a2c3990abac8ffeb410
+Merge: 6cd7b09 a726b4f
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Dec 15 05:28:08 2013 -0600
+
+    Merge tag 'release/v1.3.2' into development
+    
+    Release v1.3.2
+    
+    * tag 'release/v1.3.2':
+      Version Bump to 1.3.2
+
+commit a726b4f1cd5ebfd09eb08b161d5ce6b0413c87d0
+Merge: 1b5fbe3 2c24b1d
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Dec 15 05:28:02 2013 -0600
+
+    Merge branch 'release/v1.3.2'
+    
+    * release/v1.3.2:
+      Version Bump to 1.3.2
+      Try to fix issues with testing on 1.8 and 1.9 when 'console/io' is not available
+      Remove rspectacular so we can get the specs to pass on 1.8 and 1.9.2
+
+commit 2c24b1dfb10c19b9129f41bdcdde436b0f98a57c
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Dec 15 05:27:53 2013 -0600
+
+    Version Bump to 1.3.2
+
+commit 6cd7b0917c5ad33f21d2c895495406a4ee2c1db6
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Dec 15 04:40:51 2013 -0600
+
+    Try to fix issues with testing on 1.8 and 1.9 when 'console/io' is not available
+
+commit e61b34940e1b6a008adf57fc8898006f17a79d53
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Dec 15 04:25:31 2013 -0600
+
+    Remove rspectacular so we can get the specs to pass on 1.8 and 1.9.2
+
+commit a7823ee68f47d290212cc041070f3ac8b25104b8
+Merge: 29b4566 1b5fbe3
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Dec 15 02:50:57 2013 -0600
+
+    Merge tag 'release/v1.3.1' into development
+    
+    Release v1.3.1
+    
+    * tag 'release/v1.3.1':
+      Version Bump to 1.3.1
+
+commit 1b5fbe34103ce47ae7756378c2cd0699bec22e11
+Merge: 93ab756 3247b57
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Dec 15 02:50:50 2013 -0600
+
+    Merge branch 'release/v1.3.1'
+    
+    * release/v1.3.1:
+      Version Bump to 1.3.1
+      Even if the throttle rate is passed in as nil, use the default regardless
+
+commit 3247b57a472b32727e2b84d0d11a074dee9e5fd6
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Dec 15 02:50:33 2013 -0600
+
+    Version Bump to 1.3.1
+
+commit 29b456611b88ab048588b4d67bf47e1f02a5a506
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Dec 15 02:48:40 2013 -0600
+
+    Even if the throttle rate is passed in as nil, use the default regardless
+
+commit fbe1a4c7137ca8e42151841f1f8ba296cae1e503
+Merge: d3fa6e5 93ab756
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Dec 15 01:29:48 2013 -0600
+
+    Merge tag 'release/v1.3.0' into development
+    
+    Release v1.3.0
+    
+    * tag 'release/v1.3.0':
+      Remove the 'Road Map' section in the README
+      Add notes to the README about non-TTY output
+      Add notes to the CHANGELOG
+      Version Bump to 1.3.0
+
+commit 93ab756eeec9b18dd7e8a2bc521607252dfd571e
+Merge: 5483cf8 606fd9f
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Dec 15 01:29:33 2013 -0600
+
+    Merge branch 'release/v1.3.0'
+    
+    * release/v1.3.0: (23 commits)
+      Remove the 'Road Map' section in the README
+      Add notes to the README about non-TTY output
+      Add notes to the CHANGELOG
+      Version Bump to 1.3.0
+      Give the bar the option of whether or not to automatically start or if `#start` has to be explicitly called
+      Whitespace
+      Default to a non-TTY-safe format if there is no TTY support when outputting the bar
+      Do not output the bar multiple times if `#resume` is called when the bar is already started
+      Do not output the bar multiple times if `#stop` is called when the bar is already stopped
+      Do not output multiple bars if `#finish` is called multiple times
+      Change progressbar variables in specs to be `let`'s instead
+      Change output variables in specs to be `let`'s instead
+      Update Gemfile.lock to use HTTPS for Rubygems
+      Add Ruby 2.0.0 to the README as a supported Ruby version
+      Test with Ruby 2.0.0 on Travis CI
+      Use HTTPS RubyGems source
+      Added an option to set the :remainder_mark (along the lines of :progress_mark) that allows the user to set the character used to represent the remaining progress to be made along the bar.
+      Add specs for the ANSI color code length calculation
+      Name the regex for the ANSI SGR codes so that it's more clear what we're doing
+      Whitespace
+      ...
+
+commit 606fd9fb73152f4dbe255b817d0e098a72f032d2
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Dec 15 01:27:52 2013 -0600
+
+    Remove the 'Road Map' section in the README
+
+commit 42912358938b1e53e003d8f5bbef346cde7a755c
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Dec 15 01:27:25 2013 -0600
+
+    Add notes to the README about non-TTY output
+
+commit 8b205da4015e9902304daf9a10025be64eb5f392
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Dec 15 01:06:50 2013 -0600
+
+    Add notes to the CHANGELOG
+
+commit e3f909524b7f4f8affc521acbc67a21adc05977d
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Dec 15 00:57:24 2013 -0600
+
+    Version Bump to 1.3.0
+
+commit d3fa6e5d76a2f3cbc4c656ed654df039b42f80d3
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Dec 15 00:55:18 2013 -0600
+
+    Give the bar the option of whether or not to automatically start or if `#start` has to be explicitly called
+
+commit d8b14b5ec75d80ce42ebc69b609c787b878b0989
+Merge: 2152694 ed6d7cf
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat Dec 14 19:59:19 2013 -0600
+
+    Merge branch 'feature/add-better-non-tty-support' into development - Thanks @gurgeous!! - Closes #57
+    
+    * feature/add-better-non-tty-support:
+      Whitespace
+      Default to a non-TTY-safe format if there is no TTY support when outputting the bar
+
+commit ed6d7cfc88a1cc7db2047593eb4acf0710025788
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat Dec 14 19:59:14 2013 -0600
+
+    Whitespace
+
+commit 0b3268af2c7440a4e0062d161fbed18e97d8b444
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat Dec 14 19:59:05 2013 -0600
+
+    Default to a non-TTY-safe format if there is no TTY support when outputting the bar
+
+commit 2152694f1786749ece1e8016f2fccf7f9a4ae136
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat Dec 14 19:19:32 2013 -0600
+
+    Do not output the bar multiple times if `#resume` is called when the bar is already started
+
+commit bda62211c121062c769a8e50a649b8c8e4d479b2
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat Dec 14 19:19:03 2013 -0600
+
+    Do not output the bar multiple times if `#stop` is called when the bar is already stopped
+
+commit c22528f4dcdada70a0a3c362b62c2478e22cba88
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat Dec 14 19:07:38 2013 -0600
+
+    Do not output multiple bars if `#finish` is called multiple times
+
+commit 25c5759c39cf0d15010def695aaf652180e57525
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat Dec 14 18:58:31 2013 -0600
+
+    Change progressbar variables in specs to be `let`'s instead
+
+commit d427220b4925b7fd507ce5dfe9eaa540e5cf2614
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat Dec 14 18:49:19 2013 -0600
+
+    Change output variables in specs to be `let`'s instead
+
+commit 0e9756b5d9e9e0de35469e4eb9eac3710c16747d
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat Dec 14 18:48:43 2013 -0600
+
+    Update Gemfile.lock to use HTTPS for Rubygems
+
+commit dbbf2fcd45e986473b8e64575844b8f4ccbf27b6
+Merge: 61b54f0 79ed988
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat Dec 14 17:00:43 2013 -0600
+
+    Merge branch 'amarshall-patch-2' into development - Closes #61
+    
+    * amarshall-patch-2:
+      Add Ruby 2.0.0 to the README as a supported Ruby version
+      Test with Ruby 2.0.0 on Travis CI
+
+commit 79ed9886cc97c6186c3a3a863df26ee892c4a522
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat Dec 14 17:00:38 2013 -0600
+
+    Add Ruby 2.0.0 to the README as a supported Ruby version
+
+commit 607aa2b1816c7b9bed4764008b6392f04e48f7ed
+Author: Andrew Marshall <andrew@johnandrewmarshall.com>
+Date:   Tue Dec 10 23:24:53 2013 -0500
+
+    Test with Ruby 2.0.0 on Travis CI
+
+commit 61b54f0e4e24f8d107208f80ec99eb8a5ae4457a
+Merge: eb847f3 69ef614
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat Dec 14 16:57:37 2013 -0600
+
+    Merge branch 'amarshall-patch-1' into development - Closes #60
+    
+    * amarshall-patch-1:
+      Use HTTPS RubyGems source
+
+commit 69ef6145d356bb931653ef79c04ac9344adb12f8
+Author: Andrew Marshall <andrew@johnandrewmarshall.com>
+Date:   Tue Dec 10 23:24:07 2013 -0500
+
+    Use HTTPS RubyGems source
+    
+    The HTTP source is insecure and deprecated.
+
+commit eb847f3a89f5d73662e616e4847d0d5f68a829fd
+Merge: f2a14e1 97cb4e1
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat Dec 14 16:54:25 2013 -0600
+
+    Merge branch 'zormandi-master' into development - Closes #52
+    
+    * zormandi-master:
+      Added an option to set the :remainder_mark (along the lines of :progress_mark) that allows the user to set the character used to represent the remaining progress to be made along the bar.
+
+commit 97cb4e19d039094bf3255fca80e2fd3b0416ddf5
+Author: Zoltan Ormandi <zoltan.ormandi@emarsys.com>
+Date:   Fri Nov 1 23:31:49 2013 +0100
+
+    Added an option to set the :remainder_mark (along the lines of :progress_mark) that allows the user to set the character used to represent the remaining progress to be made along the bar.
+
+commit f2a14e1cd1a83f996a892d3d4700769911b6edb7
+Merge: 68504b2 6bc9d6b
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat Dec 14 16:51:10 2013 -0600
+
+    Merge branch 'ddnexus-master' into development - Closes #50
+    
+    * ddnexus-master:
+      Add specs for the ANSI color code length calculation
+      Name the regex for the ANSI SGR codes so that it's more clear what we're doing
+      Whitespace
+      Remove comment
+      allows to inclue ANSI SGR codes into molecules, preserving the printable length
+
+commit 6bc9d6beabcd270728357cae190deb98cb107710
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat Dec 14 16:51:02 2013 -0600
+
+    Add specs for the ANSI color code length calculation
+
+commit a6ebeb5bcca449db65d5928d69de99968c7fef98
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat Dec 14 16:50:49 2013 -0600
+
+    Name the regex for the ANSI SGR codes so that it's more clear what we're doing
+
+commit 71237e8028db856284c2b9bcc5c691811905dc95
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat Dec 14 16:49:53 2013 -0600
+
+    Whitespace
+
+commit 9f88f9e5c1927619692cb673a84c7dbdbffe5f41
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat Dec 14 16:49:24 2013 -0600
+
+    Remove comment
+
+commit 412661602bbf469c2221c1d4b018476977769ba0
+Author: Domizio Demichelis <dd.nexus@gmail.com>
+Date:   Sat Aug 24 10:31:38 2013 +0200
+
+    allows to inclue ANSI SGR codes into molecules, preserving the printable length
+
+commit 68504b20ae5cf757f0f9881b22156734333db649
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat Dec 14 02:29:59 2013 -0600
+
+    Switch from using 'git ls-files' to Ruby Dir globbing - Closes #54
+
+commit 0aa50116d53b24718f8065cb2a63cde658a918a9
+Merge: b710280 5483cf8
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Mon Aug 12 23:59:29 2013 -0500
+
+    Merge tag 'release/v1.2.0' into development
+    
+    Release v1.2.0
+    
+    * tag 'release/v1.2.0':
+      Version Bump to 1.2.0
+
+commit 5483cf834a74018e8a0c2091e1939d1981de9a2b
+Merge: d89fd54 b5fcb8c
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Mon Aug 12 23:59:23 2013 -0500
+
+    Merge branch 'release/v1.2.0'
+    
+    * release/v1.2.0: (25 commits)
+      Version Bump to 1.2.0
+      Add note to CHANGELOG about TTY updates
+      Update benchmark script
+      Update logic to describe the bar as being 'stopped' also when it is 'finished'
+      Whitespace
+      Only print the bar output if we're printing to a TTY device, or any device as long as the bar is finished
+      Switch to  instead of STDOUT so that it can be properly reassigned for redirections
+      Move carriage return to the clear method
+      Add better inspection now that we can have a nil total
+      Add note about unknown progress to the changelog
+      Whitespace
+      Add notes to the README about displaying unknown progress
+      Fix missing throttle rate in README
+      Allow the progress bar to have an 'unknown' amount of progress
+      Whitespace
+      Add item to the changelog
+      Update the benchmark script
+      Add #log to progressbar for properly handling bar output when printing to the output IO
+      Add CHANGELOG
+      Rename all of the requires lines to be consistent with the new lib file
+      ...
+
+commit b5fcb8cccceaea02e983119629e76fff48faad3b
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Mon Aug 12 23:59:09 2013 -0500
+
+    Version Bump to 1.2.0
+
+commit b71028024cdda986ccbaf4e4692c623797305d4d
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Mon Aug 12 23:58:40 2013 -0500
+
+    Add note to CHANGELOG about TTY updates
+
+commit 6e196210a50319f96ec3621d227cb892b1f635a5
+Merge: c03522c 39b1a4d
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Mon Aug 12 13:39:20 2013 -0500
+
+    Merge branch 'feature/proper-output-for-non-tty' into development
+    
+    * feature/proper-output-for-non-tty:
+      Update benchmark script
+      Update logic to describe the bar as being 'stopped' also when it is 'finished'
+      Whitespace
+      Only print the bar output if we're printing to a TTY device, or any device as long as the bar is finished
+      Switch to  instead of STDOUT so that it can be properly reassigned for redirections
+
+commit 39b1a4d72ceb323aea711f12668cea50b73399aa
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Mon Aug 12 13:39:03 2013 -0500
+
+    Update benchmark script
+
+commit a4c007733666ebb4453049fbd91666a3928eacae
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Mon Aug 12 13:20:49 2013 -0500
+
+    Update logic to describe the bar as being 'stopped' also when it is 'finished'
+
+commit 95b45528a0133c68fb14798fb39f1fbe14abf42a
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Mon Aug 12 13:11:30 2013 -0500
+
+    Whitespace
+
+commit 78dac9f2ec6160abef449558798a401a22d54d6a
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Mon Aug 12 13:10:13 2013 -0500
+
+    Only print the bar output if we're printing to a TTY device, or any device as long as the bar is finished
+
+commit 5717929804f231c119710428d67591c2265848fe
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Mon Aug 12 13:09:30 2013 -0500
+
+    Switch to  instead of STDOUT so that it can be properly reassigned for redirections
+
+commit c03522ce542a3ddb587b74e1db8a690ef0a34f76
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Mon Aug 12 12:59:25 2013 -0500
+
+    Move carriage return to the clear method
+
+commit 09355ea1f2cce7dd90e63b7559c9092b7a841746
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Mon Aug 12 12:58:28 2013 -0500
+
+    Add better inspection now that we can have a nil total
+
+commit dc5d1bd87392b515a135daacf3742d7a22d0a05d
+Merge: 437be5a 9a1f8c0
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Aug 11 22:38:49 2013 -0500
+
+    Merge branch 'feature/add-unknown-completion-ability' into development
+    
+    * feature/add-unknown-completion-ability:
+      Add note about unknown progress to the changelog
+      Whitespace
+      Add notes to the README about displaying unknown progress
+      Fix missing throttle rate in README
+      Allow the progress bar to have an 'unknown' amount of progress
+
+commit 9a1f8c03cb32381c3191af52f4a8a7878f5b3b5d
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Aug 11 22:38:36 2013 -0500
+
+    Add note about unknown progress to the changelog
+
+commit 1e803f19b5e79a366f8add98bd3df965f4cf134c
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Aug 11 22:37:58 2013 -0500
+
+    Whitespace
+
+commit e4de2657a99f69a73fe4a4b8375489245662cf66
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Aug 11 22:37:51 2013 -0500
+
+    Add notes to the README about displaying unknown progress
+
+commit 5156263984ff218fb6779179c46a6dd957565a4e
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Aug 11 22:13:13 2013 -0500
+
+    Fix missing throttle rate in README
+
+commit 4ac7cc1e0a042faccfb15f2372ba06b42cad6cb7
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Aug 11 22:10:02 2013 -0500
+
+    Allow the progress bar to have an 'unknown' amount of progress
+
+commit 437be5abdf9c70152f456929b5d1508b153231fe
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Aug 11 20:54:15 2013 -0500
+
+    Whitespace
+
+commit 87b161304f2b189847c55cf1035a9714100f2af8
+Merge: 1295df9 f87b2a7
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Aug 11 20:33:54 2013 -0500
+
+    Merge branch 'feature/logging-method' into development
+    
+    * feature/logging-method:
+      Add item to the changelog
+      Update the benchmark script
+      Add #log to progressbar for properly handling bar output when printing to the output IO
+
+commit f87b2a7829cd3a7cdd9a5fc2c2882a202d0a3667
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Aug 11 20:33:49 2013 -0500
+
+    Add item to the changelog
+
+commit 2b94bb5335f51223dd24444d01a3f5c2353abab1
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Aug 11 20:33:00 2013 -0500
+
+    Update the benchmark script
+
+commit 60c5f95e6b1d7909083122b3c365caa4dbd7646f
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Aug 11 20:32:47 2013 -0500
+
+    Add #log to progressbar for properly handling bar output when printing to the output IO
+
+commit 1295df9040fadb9936cf5516901216422d262587
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Aug 11 19:43:45 2013 -0500
+
+    Add CHANGELOG
+
+commit 65fa14688be7ef6ae685fa80ff5d9b81922d960a
+Merge: 5ef5cd6 1e7e38b
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Aug 11 19:46:25 2013 -0500
+
+    Merge branch 'feature/remove-deprecations' into development
+    
+    * feature/remove-deprecations:
+      Rename all of the requires lines to be consistent with the new lib file
+      Remove depreciation code
+
+commit 1e7e38b4f44fb2dbc80ebabc217d7262461023c8
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Aug 11 19:40:21 2013 -0500
+
+    Rename all of the requires lines to be consistent with the new lib file
+
+commit 540617de944556ab51bd35bd9610453d2ee23293
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Aug 11 19:37:58 2013 -0500
+
+    Remove depreciation code
+
+commit 5ef5cd69ec56b610bae7a512e0ac78707a53f6d3
+Merge: f10de69 d89fd54
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Aug 11 03:14:11 2013 -0500
+
+    Merge branch 'master' into development
+    
+    * master:
+      Fix the 'negative argument' problem - Closes #47
+      Update a spec that was passing when it shouldn't have been and pend it until we can implement the fix
+      Upgrade rspec and fuubar
+      When dividing up the remainder of the length and determining how much space a completed bar should take up, round down so that the bar doesn't complete until 100%
+      Add tags file to gitignore
+
+commit d89fd54b8cd2a378d2bba167f49f9c0c10e00be9
+Merge: 68ed796 36b9755
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Aug 11 03:13:02 2013 -0500
+
+    Merge branch 'hotfix/v1.1.2'
+    
+    * hotfix/v1.1.2:
+      Fix the 'negative argument' problem - Closes #47
+      Update a spec that was passing when it shouldn't have been and pend it until we can implement the fix
+      Upgrade rspec and fuubar
+      When dividing up the remainder of the length and determining how much space a completed bar should take up, round down so that the bar doesn't complete until 100%
+      Add tags file to gitignore
+
+commit 36b9755e9d7a29d3a37a9a9215352528f53966f3
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Aug 11 02:33:18 2013 -0500
+
+    Fix the 'negative argument' problem - Closes #47
+
+commit 6bffaa7f54bdf6bc5c8a0a6dcd6c180cf0448cc2
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Aug 11 02:28:19 2013 -0500
+
+    Update a spec that was passing when it shouldn't have been and pend it until we can implement the fix
+
+commit 991f39c7780e88a6b3f8656c11996729ad1e2cf4
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Aug 11 01:39:02 2013 -0500
+
+    Upgrade rspec and fuubar
+
+commit 5591a997077e554040cedf665f27a551146040b1
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Aug 11 01:37:10 2013 -0500
+
+    When dividing up the remainder of the length and determining how much space a completed bar should take up, round down so that the bar doesn't complete until 100%
+
+commit 792f1ca662723a40a13e0ab125f3b6e4f3d577af
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Aug 11 01:28:22 2013 -0500
+
+    Add tags file to gitignore
+
+commit f10de6939a4c3ee5d128752ddb89185a874fdd95
+Merge: a8bd693 68ed796
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat Jun 8 14:06:17 2013 -0500
+
+    Merge tag 'release/v1.1.1' into development
+    
+    * tag 'release/v1.1.1':
+      Fix file modes to be world readable
+
+commit 68ed796054071f99c0ee8b614a9579a7b3a33213
+Merge: b60e48d bc177a7
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat Jun 8 14:05:37 2013 -0500
+
+    Merge branch 'hotfix/v1.1.1'
+    
+    * hotfix/v1.1.1:
+      Fix file modes to be world readable
+
+commit bc177a71885b9e3dbb4613489bd1893de74ec2e0
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat Jun 8 14:03:09 2013 -0500
+
+    Fix file modes to be world readable
+
+commit a8bd693885e3ddd344eea841fb003010ea472a2c
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Wed May 29 02:04:29 2013 -0500
+
+    Whitespace
+
+commit 2f6fd7437a668f5150cda3b4f848a4d8a357a797
+Author: Florian Frank <flori@ping.de>
+Date:   Thu May 2 11:13:39 2013 +0200
+
+    Filter out specs themselves from coverage report
+    
+    Also use the newest stable rspec release.
+    
+    Conflicts:
+    	Gemfile.lock
+    	ruby-progressbar.gemspec
+
+commit 6094521adad7021ee7828bf1867b51155e4d74fe
+Author: Florian Frank <flori@ping.de>
+Date:   Mon Apr 29 19:17:05 2013 +0200
+
+    Add tags file to gitignore
+
+commit 7f60ae508d77cd34d3cd461bf675644a229fcc62
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun May 26 02:10:05 2013 -0500
+
+    Simplify #with_progressables and #with_timers
+
+commit e988944f272b9633108303957a06e1c12c459c90
+Merge: 5af929b b60e48d
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Wed May 29 03:15:55 2013 -0500
+
+    Merge tag 'release/v1.1.0' into development
+    
+    Release v1.1.0
+    
+    * tag 'release/v1.1.0':
+      Version Bump to v1.1.0
+
+commit b60e48ddc487ed6294573f0722d2cd9112114028
+Merge: 9dd1970 0bb025f
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Wed May 29 03:15:48 2013 -0500
+
+    Merge branch 'release/v1.1.0'
+    
+    * release/v1.1.0: (34 commits)
+      Version Bump to v1.1.0
+      Upgrade simplecov so it is resilient to mathn being loaded
+      fix progress format when core lib mathn is loaded
+      Rename throttle_period to throttle_rate
+      Set a default throttle_period of 100 times per second
+      Use the new precise #elapsed_seconds in the throttle component
+      Add #elapsed_seconds that gets a more precise value for the elapsed time
+      Rename #elapsed_seconds to #elapsed_whole_seconds
+      Add throttle_period documentation
+      Made throttle API resemble other components
+      Whitespace
+      Add throttle_period option to #create
+      Add throttle component
+      Use StringIO in the new spec so we don't get output to STDOUT
+      fix for the ruby_debug error, where debug defines a start method on kernel that is used erroneously by progressbar
+      spec that recreates the problem we're seeing with ruby-debug under jruby
+      fix terminal width crashing progressbar
+      Add failing test for terminal width crashing progress bar
+      Make sure we're using an up-to-date version of the JSON gem
+      Fix gemspec since Date.today is no longer supported
+      ...
+
+commit 0bb025f65901ae1a95fb7ede193118b3d5b6c9ac
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Wed May 29 03:13:45 2013 -0500
+
+    Version Bump to v1.1.0
+
+commit 5af929b523bb1872d7a088b34c6434020dde1639
+Merge: ef14a8c 5d9eab2
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun May 26 01:38:06 2013 -0500
+
+    Merge branch 'aekym-master' into development
+    
+    Closes #31
+    
+    * aekym-master:
+      Upgrade simplecov so it is resilient to mathn being loaded
+      fix progress format when core lib mathn is loaded
+
+commit 5d9eab2253a7120bb5fdee824128f25bec260055
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun May 26 01:37:56 2013 -0500
+
+    Upgrade simplecov so it is resilient to mathn being loaded
+
+commit 0b17e7f10cca1bdb70c14782773ec9a62b31ba85
+Author: aekym <me@aekym.com>
+Date:   Thu Dec 6 21:55:19 2012 -0500
+
+    fix progress format when core lib mathn is loaded
+
+commit ef14a8c1b3a85f58ec2b97755b8726185fdbfa3d
+Merge: df33545 401aa64
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat May 25 22:29:22 2013 -0500
+
+    Merge branch 'artm-master' into development
+    
+    Closes #39
+    
+    * artm-master:
+      Rename throttle_period to throttle_rate
+      Set a default throttle_period of 100 times per second
+      Use the new precise #elapsed_seconds in the throttle component
+      Add #elapsed_seconds that gets a more precise value for the elapsed time
+      Rename #elapsed_seconds to #elapsed_whole_seconds
+      Add throttle_period documentation
+      Made throttle API resemble other components
+      Whitespace
+      Add throttle_period option to #create
+      Add throttle component
+
+commit 401aa64f58472fc7e36e27d059635a89c1780dd0
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat May 25 22:22:41 2013 -0500
+
+    Rename throttle_period to throttle_rate
+
+commit 01b9ddd24e8c82eef6fb8b1a1aaca88b0dbe3c94
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat May 25 22:18:15 2013 -0500
+
+    Set a default throttle_period of 100 times per second
+
+commit 407d6cc741debd30f0f61025bd501cde1de81c9f
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat May 25 22:04:54 2013 -0500
+
+    Use the new precise #elapsed_seconds in the throttle component
+
+commit 194bebeb701cad7e6fd45d9ff943239d6a2ebcc2
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat May 25 22:04:32 2013 -0500
+
+    Add #elapsed_seconds that gets a more precise value for the elapsed time
+
+commit d934b335dd0906157910eb945294911002188d49
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat May 25 22:03:52 2013 -0500
+
+    Rename #elapsed_seconds to #elapsed_whole_seconds
+
+commit f8721a2b0923cf46c23ae344153eaf7a3398694b
+Author: Artem Baguinski <abaguinski@depraktijkindex.nl>
+Date:   Wed Mar 27 00:24:36 2013 +0100
+
+    Add throttle_period documentation
+
+commit d232915ff48ab246f2baf8c57cb0bcd2e5e851f4
+Author: Artem Baguinski <abaguinski@depraktijkindex.nl>
+Date:   Wed Mar 27 00:16:25 2013 +0100
+
+    Made throttle API resemble other components
+
+commit 9fec768d0e877372239757bd55f4f133953de585
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat May 25 21:27:41 2013 -0500
+
+    Whitespace
+
+commit edb29898cc455800b711a371cb53527a7c44095f
+Author: Artem Baguinski <abaguinski@depraktijkindex.nl>
+Date:   Wed Mar 27 00:09:58 2013 +0100
+
+    Add throttle_period option to #create
+
+commit f63daa651e40313e44742ff0bda62350d0205a2c
+Author: Artem Baguinski <abaguinski@depraktijkindex.nl>
+Date:   Tue Mar 26 23:47:37 2013 +0100
+
+    Add throttle component
+
+commit df335456ebf214a4afb820cb300bb564a89dc940
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat May 25 21:34:38 2013 -0500
+
+    Use StringIO in the new spec so we don't get output to STDOUT
+
+commit 7c81d977483eea5da7e9b9bd3e1b9f93348a385a
+Merge: 0d95af5 4f23fdd
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat May 25 20:53:13 2013 -0500
+
+    Merge branch 'agworld-master' into development
+    
+    Closes #40
+    
+    * agworld-master:
+      fix for the ruby_debug error, where debug defines a start method on kernel that is used erroneously by progressbar
+      spec that recreates the problem we're seeing with ruby-debug under jruby
+
+commit 4f23fdd2d1284c7221b352dbe93d615d1e353f11
+Author: Andrew Macgregor <andrew.macgregor@agworld.com.au>
+Date:   Wed Mar 27 14:31:30 2013 +0800
+
+    fix for the ruby_debug error, where debug defines a start method on kernel that is used erroneously by progressbar
+
+commit 8745feffb25dd0974eaf3beaed0ec6e45ca5b229
+Author: jasonhutchens <jason@agworld.com.au>
+Date:   Wed Mar 27 10:26:30 2013 +0800
+
+    spec that recreates the problem we're seeing with ruby-debug under jruby
+
+commit 0d95af59bfb265c47226c8511ec03053382a7d22
+Merge: c8d1e46 0cf1bef
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat May 25 20:25:08 2013 -0500
+
+    Merge branch 'timgaleckas-master' into development - Closes #42
+    
+    * timgaleckas-master:
+      fix terminal width crashing progressbar
+      Add failing test for terminal width crashing progress bar
+
+commit 0cf1befd280336eed287f6a40ef78f6bc8d49a1f
+Author: Tim Galeckas <tim@galeckas.com>
+Date:   Fri Apr 26 11:34:24 2013 -0500
+
+    fix terminal width crashing progressbar
+
+commit 9df3afa5df48b647ecb1f544db6d5a86980c2fb5
+Author: Tim Galeckas <tim@galeckas.com>
+Date:   Fri Apr 26 11:31:58 2013 -0500
+
+    Add failing test for terminal width crashing progress bar
+
+commit c8d1e46b43ddb6efb7dd907ffbcdde851c2a0935
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat May 25 20:16:58 2013 -0500
+
+    Make sure we're using an up-to-date version of the JSON gem
+
+commit 85837c17f10e7a34aeeb7ab7f42f423aae7ab642
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat May 25 20:14:11 2013 -0500
+
+    Fix gemspec since Date.today is no longer supported
+
+commit 038e0a3ab851d228e321736c48e1d8d6640ad084
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat May 25 20:12:43 2013 -0500
+
+    Update ruby-prof
+
+commit 90d635a1460b7860d1674e5da5f2a61f431b67b0
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat May 25 20:00:32 2013 -0500
+
+    Upgrade timecop
+
+commit 056768a875867dc09b34d8614a022b650beeb5fe
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat May 25 19:49:09 2013 -0500
+
+    Upgrade simplecov
+
+commit 19259af7dc27c9730e06f867278fbfc276723471
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat May 25 19:39:36 2013 -0500
+
+    Upgrade rake
+
+commit 4e30aa7383ccf97e9f62f0d09cef0db4b366b45b
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat May 25 19:36:02 2013 -0500
+
+    Whitespace
+
+commit 22111902c62045c987ffda907c3620531d8d2494
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat May 25 19:35:53 2013 -0500
+
+    Make changes related to rspectacular
+
+commit 9f2f286b0e00df2079f239b7e386462638890ef6
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat May 25 19:10:35 2013 -0500
+
+    Install rspectacular
+
+commit bac3454382ae241868b93372e00a3fa54d0bcc53
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat May 25 19:07:29 2013 -0500
+
+    Remove guard
+
+commit c61dc3de9855c3fee01e27a0d686376cc58bce0f
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat May 25 18:45:52 2013 -0500
+
+    Rework gem manifest so that it only calls ls-files once
+
+commit d5b0e68be84896b6adf0ca3e7aff33e1acd24848
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat May 25 18:34:50 2013 -0500
+
+    Replace .rvmrc with .ruby-version
+
+commit 189e2c57a02f2c6224c37b3c3be733f8fbf6e610
+Merge: 7fe1638 f6b87fb
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Mon Dec 17 00:42:50 2012 -0600
+
+    Merge branch 'devwout-master' into development
+    
+    * devwout-master:
+      Rework #length specs now that we have a more complex set of specifications
+      Fix overriding the progress bar length with an environment variable.
+
+commit f6b87fb06c008735cb25ed83f8fa1f6822af90ff
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Mon Dec 17 00:42:40 2012 -0600
+
+    Rework #length specs now that we have a more complex set of specifications
+
+commit c65b957731f284b8f709a3f1c49fc35b8a558f29
+Author: Ewout <e@ewout.name>
+Date:   Fri Nov 2 14:13:49 2012 +0100
+
+    Fix overriding the progress bar length with an environment variable.
+
+commit 7fe16383d1dbb8650ce1e8c33c5126a1590d3157
+Author: Jeff Felchner <accounts+git_hub@thekompanee.com>
+Date:   Sun Dec 16 23:22:20 2012 -0600
+
+    Fix the `rdoc_options` specification in the gemspec
+
+commit 043b3397c38f21ad503b7a28a0199fd4330755fb
+Author: Jeff Felchner <accounts+git_hub@thekompanee.com>
+Date:   Sun Dec 16 23:18:02 2012 -0600
+
+    Add Ruby Markdown code fencing to the README
+
+commit 6bf413bb2627c7d08f222bc3b79555268a82c8e1
+Merge: ddf8ef4 9dd1970
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Oct 7 19:24:11 2012 -0500
+
+    Merge tag 'release/v1.0.2' into development
+    
+    Release v1.0.2
+    
+    * tag 'release/v1.0.2':
+      Version Bump to 1.0.2
+
+commit 9dd1970dcc78bf9711e60907530f5495a82ca2f7
+Merge: 20794d4 4aeab5e
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Oct 7 19:24:03 2012 -0500
+
+    Merge branch 'release/v1.0.2'
+    
+    * release/v1.0.2: (24 commits)
+      Version Bump to 1.0.2
+      Remove superfluous comment
+      The amount returned if the total is 0 should always be 100 (as in 100%) and not the DEFAULT_TOTAL.  Even though they currently happen to be the same number.
+      return DEFAULT_TOTAL for percentage_completed of total is zero, fixing ZeroDivisionError
+      Use io/console where available.
+      Add tmux notifications to Guardfile
+      Bundler is not a development dependency
+      Hashes are not ordered and therefore when looking for the time mocking method, we weren't selecting the proper one. Switched to an Array instead.
+      Update development gems
+      Move ruby-prof into the Gemfile so it is only loaded when it's MRI Ruby
+      Add a script for benchmarking
+      Whitespace
+      Now that we're memoizing Format::Base#bar_molecules, just use it to calculate how many bar molecules are left
+      Limit the API of the Format.Base class by making #non_bar_molecules and #bar_molecules private
+      Move Formatter#process into Format::Base because it is much more concerned with the format
+      Remove the Kernel#tap in Formatter#process and just use an instance variable instead
+      Now that we're not reparsing the format string each time, we can save some cycles by memoizing the Format::Base#non_bar_molecules and #bar_molecules
+      When setting the format string, if it hasn't changed, we don't need to reparse it
+      Extract the logic of setting the format string out into its own private method ProgressBar::Formatter#format_string=
+      Add 'ruby-prof' to the project as a development gem
+      ...
+
+commit 4aeab5e572b4393988dfbba3455d9e4dde6e379b
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Oct 7 19:21:18 2012 -0500
+
+    Version Bump to 1.0.2
+
+commit ddf8ef45401689f6976eb1692f54d6b9d1db8fe5
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Oct 7 19:12:25 2012 -0500
+
+    Remove superfluous comment
+
+commit dc092dfb49495ca9dd0e903e2cb2c9d37edc27af
+Merge: 1148bc9 4b27b63
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Oct 7 19:11:27 2012 -0500
+
+    Merge branch 'cgunther-fix-divide-by-zero' into development
+    
+    * cgunther-fix-divide-by-zero:
+      The amount returned if the total is 0 should always be 100 (as in 100%) and not the DEFAULT_TOTAL.  Even though they currently happen to be the same number.
+      return DEFAULT_TOTAL for percentage_completed of total is zero, fixing ZeroDivisionError
+
+commit 4b27b63e75e46ca7375a727a5bb18709d35c0c6e
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Oct 7 19:11:21 2012 -0500
+
+    The amount returned if the total is 0 should always be 100 (as in 100%) and not the DEFAULT_TOTAL.  Even though they currently happen to be the same number.
+
+commit 649e27f3c46e65653112eeef558ffc47ee510714
+Author: Chris Gunther <chris@room118solutions.com>
+Date:   Fri Sep 28 16:46:48 2012 -0400
+
+    return DEFAULT_TOTAL for percentage_completed of total is zero, fixing ZeroDivisionError
+
+commit 1148bc9a316dc5b3063596966e9d37acd77f682c
+Merge: 0dd6a0b 05a8ad9
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Oct 7 18:59:06 2012 -0500
+
+    Merge branch 'betelgeuse-performance_fix_by_io_console' into development
+    
+    * betelgeuse-performance_fix_by_io_console:
+      Use io/console where available.
+
+commit 05a8ad9b0a4824120d01d47f51a9e686c45a9e1c
+Author: Petteri Raty <petsku@petteriraty.eu>
+Date:   Tue Oct 2 00:43:55 2012 +0300
+
+    Use io/console where available.
+    
+    Using io/console does not require calling external binaries so this
+    solves issue #20 (slow performance) where the library is available.
+    For MRI it was added in version 1.9.3.
+
+commit 0dd6a0b4f382075526eb0282dc606984b77b6ae1
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Oct 7 18:33:17 2012 -0500
+
+    Add tmux notifications to Guardfile
+
+commit bee5b6fb0b644782c2e5494cbc9d89c299c66e7d
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Oct 7 18:32:28 2012 -0500
+
+    Bundler is not a development dependency
+
+commit 92355e29ab53091960071eee18c3ee8efe397506
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Oct 7 18:30:18 2012 -0500
+
+    Hashes are not ordered and therefore when looking for the time mocking method, we weren't selecting the proper one. Switched to an Array instead.
+
+commit 96eb07432946b2b8346f10eaf291482942340570
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Oct 7 18:17:18 2012 -0500
+
+    Update development gems
+
+commit 9c72fd43a0bf234fdfce6d45ab423905b104681e
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Wed Sep 19 13:21:37 2012 -0500
+
+    Move ruby-prof into the Gemfile so it is only loaded when it's MRI Ruby
+
+commit b678acfb757299ed580417b86d1c0516776ac2b6
+Merge: d0bb29b 1e85be3
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Wed Sep 19 11:32:19 2012 -0500
+
+    Merge branch 'refactoring/performance-tuning' into development
+    
+    * refactoring/performance-tuning:
+      Add a script for benchmarking
+      Whitespace
+      Now that we're memoizing Format::Base#bar_molecules, just use it to calculate how many bar molecules are left
+      Limit the API of the Format.Base class by making #non_bar_molecules and #bar_molecules private
+      Move Formatter#process into Format::Base because it is much more concerned with the format
+      Remove the Kernel#tap in Formatter#process and just use an instance variable instead
+      Now that we're not reparsing the format string each time, we can save some cycles by memoizing the Format::Base#non_bar_molecules and #bar_molecules
+      When setting the format string, if it hasn't changed, we don't need to reparse it
+      Extract the logic of setting the format string out into its own private method ProgressBar::Formatter#format_string=
+      Add 'ruby-prof' to the project as a development gem
+
+commit 1e85be389eebde3b2b6810d30890e2275949c9c3
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Wed Sep 19 11:30:17 2012 -0500
+
+    Add a script for benchmarking
+
+commit 44518fdbf891ec54dc0e3ab0e1b863e797f162b6
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Wed Sep 19 11:20:13 2012 -0500
+
+    Whitespace
+
+commit bedbfb8c18f0e10510278fd61686bb7109b0314e
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Wed Sep 19 11:25:50 2012 -0500
+
+    Now that we're memoizing Format::Base#bar_molecules, just use it to calculate how many bar molecules are left
+
+commit 2912f9173578c6e5520a35020138e4e3ca9db37c
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Wed Sep 19 11:19:57 2012 -0500
+
+    Limit the API of the Format.Base class by making #non_bar_molecules and #bar_molecules private
+
+commit 5f6e4c849917979b3c59a34c3b524ce0b48e894d
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Tue Sep 18 21:19:27 2012 -0500
+
+    Move Formatter#process into Format::Base because it is much more concerned with the format
+
+commit 9cc71d766e2cff170d997b98a383111008aae7b3
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Tue Sep 18 20:46:42 2012 -0500
+
+    Remove the Kernel#tap in Formatter#process and just use an instance variable instead
+
+commit eb72ec5a1913a04cd1b36ffc68c45280802affa7
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Tue Sep 18 20:36:42 2012 -0500
+
+    Now that we're not reparsing the format string each time, we can save some cycles by memoizing the Format::Base#non_bar_molecules and #bar_molecules
+
+commit f6dd6df3e2216ede37390d7e5bc93dfa81c0d563
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Tue Sep 18 20:35:46 2012 -0500
+
+    When setting the format string, if it hasn't changed, we don't need to reparse it
+
+commit 2ad66ab8bb8d892a5d75bdef313bed5e5bd65197
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Tue Sep 18 20:34:12 2012 -0500
+
+    Extract the logic of setting the format string out into its own private method ProgressBar::Formatter#format_string=
+
+commit 73eafaa747cc139f47a62c5f5fd2f4dd0fb90828
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Tue Sep 18 20:28:19 2012 -0500
+
+    Add 'ruby-prof' to the project as a development gem
+
+commit d0bb29bbc1401f62fb972af979d4569addfb5cfa
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Tue Aug 28 01:19:31 2012 -0500
+
+    Version Bump in Gemfile.lock
+
+commit 9e52afa924a226be85d0c295ca635ca451d1d9d1
+Merge: 85767ce b4336e9
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Tue Aug 28 01:15:01 2012 -0500
+
+    Merge branch 'hotfix/v1.0.1' into development
+    
+    * hotfix/v1.0.1:
+      Version Bump
+      Add Ruby 1.8.7 back into Travis CI build
+      Fixing string slice bug
+
+commit 20794d4e794f2b1e160e0c9d71e5b1c3be38b7f9
+Merge: 9a9e538 b4336e9
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Tue Aug 28 01:14:53 2012 -0500
+
+    Merge branch 'hotfix/v1.0.1'
+    
+    * hotfix/v1.0.1:
+      Version Bump
+      Add Ruby 1.8.7 back into Travis CI build
+      Fixing string slice bug
+
+commit b4336e9e4a4ac47ca44845214f07cbd26c94be38
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Tue Aug 28 01:14:42 2012 -0500
+
+    Version Bump
+
+commit d838791942f56e856bc583b0f18eeb4d142457a2
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Tue Aug 28 01:12:18 2012 -0500
+
+    Add Ruby 1.8.7 back into Travis CI build
+
+commit a0dc9cb7c5113ed36e00b4202c955e620f623ea5
+Merge: 9a9e538 e680136
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Tue Aug 28 01:11:30 2012 -0500
+
+    Merge remote-tracking branch 'zole/master' into hotfix/v1.0.1
+    
+    * zole/master:
+      Fixing string slice bug
+
+commit e6801368bdf5d39f0311152593152650f4a42dad
+Author: Alex Michaud <alex@bucketosoftware.com>
+Date:   Sat Aug 25 17:13:36 2012 -0700
+
+    Fixing string slice bug
+
+commit 85767ce32224af262531744a74a0cc3fa5a2a188
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat Aug 18 02:10:05 2012 -0500
+
+    Add a Rakefile
+
+commit 610bb70d1b8323b2aaab36bf07210d290dc03886
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat Aug 18 02:09:55 2012 -0500
+
+    Update .gitignore
+
+commit 37e813de5198388c25970eb28259aa91dad0e54b
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat Aug 18 02:06:15 2012 -0500
+
+    Add Rake to the Gemfile
+
+commit 8eddf42485e629afd7ee29315344cb1b73ed0c3d
+Merge: 43fbca4 9a9e538
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat Aug 18 02:01:00 2012 -0500
+
+    Merge tag 'release/v1.0.0' into development
+    
+    Release v1.0.0
+    
+    * tag 'release/v1.0.0': (22 commits)
+      Remove 1.8 from the Ruby Travis builds
+      Add a spec for the %% molecule
+      Fix bug where a progress bar with an integrated percentage miscalculated the space it was taking up
+      fix @terminal_width and bar_width calculation
+      Fix more README typos
+      Version Bump
+      Replace @out.print with @out.write to work better in dumb terminal like Emacs' M-x shell.
+      Document the smoothing attribute a little better.
+      Rewrote smoothing stuff to something better.
+      Offload handling of weird time values to format_time (isn't that its job?) ;-)
+      Added "smoothing" attribute (default 0.9). It can be set to nil to use the old ETA code.
+      Make time estimate a smoothed moving average
+      allow to customize the #title_width
+      removed trailing whitespace
+      Detect whether the output device is a terminal, and use a simplified output strategy when it is not.
+      Use 1.9 compatible require in test.
+      Add tests for Timecop and Delorean time mocking
+      Make Progressbar resistant to time mocking
+      Automatically tag gem builds as Date.today
+      Fix Version Bump
+      ...
+
+commit 9a9e538d1ea35acc8a74e31576f3aa88a1402fa9
+Merge: a653213 1412ac5
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat Aug 18 02:00:16 2012 -0500
+
+    Merge branch 'release/v1.0.0'
+    
+    * release/v1.0.0: (195 commits)
+      Remove 1.8 from the Ruby Travis builds
+      Add a spec for the %% molecule
+      Fix bug where a progress bar with an integrated percentage miscalculated the space it was taking up
+      Fix more README typos
+      Set the default bar mark to '='
+      Make sure to blow up if a molecule is not value
+      It's not sufficient to say that a molecule is 'a percent sign followed by something that isn't a percent sign', we need to force it to be followed by a letter
+      Fix &nbsp; problems in the README
+      Update the formatting to make sure the %b and %i formatting molecules can coexist with each other
+      Now that we can use the %b and %i flags, we can create a mirrored bar simply by using a format string of '%i%b' and therefore this extra code is no longer necessary
+      Make sure that when the timer is started, then stopped, then started again, it should not register as `stopped?`
+      Allow %i to be used display the incomplete space of the bar
+      Update `ProgressBar::Formatter#format` to reset the bar style to default if it is called without passing in a format string
+      Allow the %b molecule to be used to display the bar only without incomplete space
+      Update the %B format test to be more reasonable
+      Make the %w molecule only return the bar with the percentage instead of including empty space
+      Remove the `length` argument when calling `ProgressBar::Components::Bar#to_s` and instead set the attribute
+      Rename `ProgressBar::Formatter#bar` to `#complete_bar`
+      Change the %b (bar with percentage) format molecule to %w
+      Swap the meaning of the %b and %B molecules
+      ...
+    
+    Conflicts:
+    	lib/progressbar.rb
+    	ruby-progressbar.gemspec
+    	test.rb
+
+commit 1412ac506ea9d85d31eee5f175cff8f614986d14
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat Aug 18 01:45:53 2012 -0500
+
+    Remove 1.8 from the Ruby Travis builds
+
+commit 003686b0c3c9c10b25d9791f2f3f9f129a3e2d98
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat Aug 4 01:01:02 2012 -0500
+
+    Add a spec for the %% molecule
+
+commit d9f210780e1a9df31e4ffcd311a843ef7e33adb3
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat Aug 4 00:59:13 2012 -0500
+
+    Fix bug where a progress bar with an integrated percentage miscalculated the space it was taking up
+    
+    The problem was from the fact that even though a bar may have a completed length of '1', the integrated percentage bar would still be taking up 3 spaces ' 0 ' which caused the calculations for the rest of the bar (specifically the negative space flag) to be off.
+
+commit a653213e044ec917aa6397687e4d96b7a0dd366f
+Merge: 02ddb78 8d555e7
+Author: Jeff Felchner <accounts+git_hub@thekompanee.com>
+Date:   Thu Aug 2 15:03:37 2012 -0700
+
+    Merge pull request #17 from DarthSim/master
+    
+    fix @terminal_width and bar_width calculation
+
+commit 8d555e7696361ae7a76916fbe6ea0872e7a21c60
+Author: DarthSim <darthsim@gmail.com>
+Date:   Fri Aug 3 03:33:09 2012 +0700
+
+    fix @terminal_width and bar_width calculation
+
+commit ac351db422836118ee7455a5aa2a1d34a716a802
+Author: Jeff Felchner <accounts+git_hub@thekompanee.com>
+Date:   Mon Jul 30 04:34:28 2012 -0500
+
+    Fix more README typos
+
+commit 02ddb78b6708c4d8adf47a0b412438443b275a08
+Merge: 3c6d249 b69a1ce
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Mon Jul 30 04:24:47 2012 -0500
+
+    Merge branch 'release/v0.11.0'
+    
+    * release/v0.11.0:
+      Version Bump
+
+commit 43fbca49a61d054b3c28315199cf47f0be8e1bba
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Mon Jul 30 04:07:37 2012 -0500
+
+    Set the default bar mark to '='
+
+commit 092401b2b8db79c2c54842064193e5ab9265d363
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Mon Jul 30 04:01:34 2012 -0500
+
+    Make sure to blow up if a molecule is not value
+
+commit d508806171d4cbd4f3a476c692e6a026167b3ade
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Mon Jul 30 04:00:46 2012 -0500
+
+    It's not sufficient to say that a molecule is 'a percent sign followed by something that isn't a percent sign', we need to force it to be followed by a letter
+
+commit a6d95f32a117b735efd58d607b0aca36e2432f74
+Author: Jeff Felchner <accounts+git_hub@thekompanee.com>
+Date:   Mon Jul 30 03:34:23 2012 -0500
+
+    Fix &nbsp; problems in the README
+
+commit 053068299753614be0493364560cd8556264538b
+Merge: 2af7422 ee8c0e9
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Mon Jul 30 04:17:04 2012 -0500
+
+    Merge branch 'allow-minimalist-bar-formats' into development
+    
+    * allow-minimalist-bar-formats:
+      Update the formatting to make sure the %b and %i formatting molecules can coexist with each other
+      Now that we can use the %b and %i flags, we can create a mirrored bar simply by using a format string of '%i%b' and therefore this extra code is no longer necessary
+      Allow %i to be used display the incomplete space of the bar
+      Allow the %b molecule to be used to display the bar only without incomplete space
+      Update the %B format test to be more reasonable
+      Make the %w molecule only return the bar with the percentage instead of including empty space
+      Remove the `length` argument when calling `ProgressBar::Components::Bar#to_s` and instead set the attribute
+      Rename `ProgressBar::Formatter#bar` to `#complete_bar`
+      Change the %b (bar with percentage) format molecule to %w
+      Swap the meaning of the %b and %B molecules
+    
+    * commit 'ee8c0e9704a0d0da93c84a3d4eeb109de986469f':
+      Update the formatting to make sure the %b and %i formatting molecules can coexist with each other
+      Now that we can use the %b and %i flags, we can create a mirrored bar simply by using a format string of '%i%b' and therefore this extra code is no longer necessary
+      Allow %i to be used display the incomplete space of the bar
+      Allow the %b molecule to be used to display the bar only without incomplete space
+      Update the %B format test to be more reasonable
+      Make the %w molecule only return the bar with the percentage instead of including empty space
+      Remove the `length` argument when calling `ProgressBar::Components::Bar#to_s` and instead set the attribute
+      Rename `ProgressBar::Formatter#bar` to `#complete_bar`
+      Change the %b (bar with percentage) format molecule to %w
+      Swap the meaning of the %b and %B molecules
+
+commit ee8c0e9704a0d0da93c84a3d4eeb109de986469f
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Mon Jul 30 03:24:53 2012 -0500
+
+    Update the formatting to make sure the %b and %i formatting molecules can coexist with each other
+
+commit 3cccb4af563fa21e484878f5599a058d70f48fce
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Mon Jul 30 02:59:07 2012 -0500
+
+    Now that we can use the %b and %i flags, we can create a mirrored bar simply by using a format string of '%i%b' and therefore this extra code is no longer necessary
+
+commit 2af7422672cd4161ad5c7f4c0d53757c96116b16
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Mon Jul 30 01:47:55 2012 -0500
+
+    Make sure that when the timer is started, then stopped, then started again, it should not register as `stopped?`
+
+commit a560d355bf052b956974c6c00c0b543216fce2d3
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Mon Jul 30 02:54:02 2012 -0500
+
+    Allow %i to be used display the incomplete space of the bar
+
+commit 533e7db47d2983360e8a78585ae8f84003efe50e
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Mon Jul 30 01:26:14 2012 -0500
+
+    Update `ProgressBar::Formatter#format` to reset the bar style to default if it is called without passing in a format string
+
+commit b1ecfc785479fe349bb5682fcb82f7a2c52c245a
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Mon Jul 30 02:46:41 2012 -0500
+
+    Allow the %b molecule to be used to display the bar only without incomplete space
+
+commit a32b4041614f8bc2126766f2d5a63081e71b296a
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Mon Jul 30 02:40:14 2012 -0500
+
+    Update the %B format test to be more reasonable
+
+commit d4e0ea77fcde8f677cfd9037f7410be812d233c0
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Mon Jul 30 02:35:45 2012 -0500
+
+    Make the %w molecule only return the bar with the percentage instead of including empty space
+
+commit 11f98287b4a1426e14e77569ff18a1747e4b07e6
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Mon Jul 30 02:32:14 2012 -0500
+
+    Remove the `length` argument when calling `ProgressBar::Components::Bar#to_s` and instead set the attribute
+
+commit 7a0590f290ea724673a8b0b3237af5c3954bc513
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Mon Jul 30 02:15:42 2012 -0500
+
+    Rename `ProgressBar::Formatter#bar` to `#complete_bar`
+
+commit 2c3e95b4aeb0ab4305750460b7508a387761db1c
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Mon Jul 30 02:14:41 2012 -0500
+
+    Change the %b (bar with percentage) format molecule to %w
+
+commit 56dbe7ec9d743a05ebfa20ea1226a52359eeb380
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Mon Jul 30 02:08:31 2012 -0500
+
+    Swap the meaning of the %b and %B molecules
+
+commit 0d418ca9371c0821b37ce99a59a097c21bb15f45
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Mon Jul 30 01:12:44 2012 -0500
+
+    There was a typo in the example formats in the README.  The literal percent sign needs to be included in the format string
+
+commit 74e1cdeaea3b626b65d0ec407c18c5b1ff1df925
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Mon Jul 30 01:06:50 2012 -0500
+
+    Make sure the '%%' molecule is formatted properly
+
+commit a8d5de99d66f220e1c45369bfb65e28448a64088
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Mon Jul 30 01:01:02 2012 -0500
+
+    Little refactoring on the `ProgressBar::Formatter#process` method
+
+commit 987a223f4fb50c21a05a2a5caac081ac05334316
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Mon Jul 30 01:00:08 2012 -0500
+
+    README update
+
+commit b9a13e53bf29e2928e046193898eba854a2cf076
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Mon Jul 30 00:36:23 2012 -0500
+
+    Whitespace
+
+commit 69cc697895c317fb19808f60732e8c41ae6ccad0
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Mon Jul 30 00:19:48 2012 -0500
+
+    Remove all of the `ProgressBar::Base#update` calls and convert to method calls that take a block `#with_update`
+
+commit 7cb7236bfeb58f9f53e8b3826f299ae5fb307d57
+Author: Jeff Felchner <accounts+git_hub@thekompanee.com>
+Date:   Sun Jul 29 21:46:43 2012 -0500
+
+    Add an "In The Weeds" section to the README
+
+commit df8cd4f6481db3fd39a36ea76c2303dcd0c37979
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Jul 29 21:01:21 2012 -0500
+
+    Add 'It's better than some other library' section to the README
+
+commit ad0e4409b9b7683601ff5b6008e4729578977b9b
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Jul 29 21:00:27 2012 -0500
+
+    Add contributors to the README
+
+commit bc651d7d0a5a90ae1dcb1d869dd3345f8b36ede9
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Jul 29 21:00:01 2012 -0500
+
+    Add supported Rubies to the README
+
+commit d4441d7e92d19f21a781c55aa2d5be26dcba0f81
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Jul 29 20:50:22 2012 -0500
+
+    Tons of README formatting updates
+
+commit 5c0a77411be177fb42f4a2cff20a7424b35ed921
+Merge: d1363c9 02cf7d5
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Jul 29 20:23:34 2012 -0500
+
+    Merge branch 'play-nice-with-time-mocking-frameworks' into development
+    
+    * play-nice-with-time-mocking-frameworks:
+      Add time-mocking information to the README
+      If Time is being mocked via Delorean, make sure that the progress bar always uses the unmocked time
+      Whitespace
+      If Time is being mocked via Timecop, make sure that the progress bar always uses the unmocked time
+      When testing, make sure that we're able to always get the proper version of `now` that we need for our particular spec
+      When calling `ProgressBar::Time.now` allow a Time-like object to be passed in
+      Add a `ruby-progressbar`-specific implementation of Time to encapsulate the business logic
+      Extract the notion of `now` into a method on the `Timer` module
+
+commit 02cf7d58d00057418c76039180033d5fb6ef92f4
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Jul 29 20:10:51 2012 -0500
+
+    Add time-mocking information to the README
+
+commit d76147bac723d255e2577ad2a2acd5ed67ffabe4
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Jul 29 19:26:22 2012 -0500
+
+    If Time is being mocked via Delorean, make sure that the progress bar always uses the unmocked time
+
+commit 86e26c88ee8369e2f8e4e7d315e30d9a955582d0
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Jul 29 19:25:40 2012 -0500
+
+    Whitespace
+
+commit 88277b2f3d7bee840794d14d56948abcda393e85
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Jul 29 19:25:18 2012 -0500
+
+    If Time is being mocked via Timecop, make sure that the progress bar always uses the unmocked time
+
+commit 62a4ac4a518a1c6d5bf26f80b0b61eb465d9205b
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Jul 29 19:20:01 2012 -0500
+
+    When testing, make sure that we're able to always get the proper version of `now` that we need for our particular spec
+
+commit 90587834b9ef5ad00cc2e6b3e3b8d776801068f9
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Jul 29 19:18:13 2012 -0500
+
+    When calling `ProgressBar::Time.now` allow a Time-like object to be passed in
+
+commit 5485201a8519d7fc5546b75f8846ef7d8a3cc0b1
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Jul 29 19:04:15 2012 -0500
+
+    Add a `ruby-progressbar`-specific implementation of Time to encapsulate the business logic
+
+commit 1e176a07b3f7c870af25786b2b1747a06909ef74
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Jul 29 06:25:00 2012 -0500
+
+    Extract the notion of `now` into a method on the `Timer` module
+
+commit d1363c95d309845e4b9bc80f7dff5a9e0fe6bde2
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Jul 29 06:19:12 2012 -0500
+
+    Remove extra `private`
+
+commit 5fba3aa9db2e892b41e014d6277f4bb2f3b350f2
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Jul 29 06:18:56 2012 -0500
+
+    Use inheritance to put `title=` in the Formatter module where it belongs
+
+commit d3bd5344effa4251daa99778f01d560e4d7438f4
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Jul 29 06:18:23 2012 -0500
+
+    I didn't notice that #total and #progress were available in the Formatter module
+
+commit 46ee2034eeb047857f8b210c64f15f49a426814b
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Jul 29 06:17:37 2012 -0500
+
+    Move logic specific to the modules into those modules and use the inheritance chain to get at them
+
+commit 2e10c000c201412f32116f9caf17f422dcc5b6f5
+Merge: f5bee9b c07e1b1
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Jul 29 06:02:41 2012 -0500
+
+    Merge branch 'add-travis-ci-integration' into development
+    
+    * commit 'c07e1b1':
+      Evidently Travis is having issues with Rubinius so we'll remove them from our .travis.yml file to get a passing build
+      Try and get better 1.8.7 compatibility when checking the end character in the progressbar string
+      Add the Travis-CI build status to the README
+      Add the Travis-CI configuration file
+
+commit c07e1b190e55e20dd30119deef43f7ca22641cdb
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Jul 29 05:59:15 2012 -0500
+
+    Evidently Travis is having issues with Rubinius so we'll remove them from our .travis.yml file to get a passing build
+
+commit 629ebb8f30e252dea8f748fc55a5102bc7463fd1
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Jul 29 05:53:44 2012 -0500
+
+    Try and get better 1.8.7 compatibility when checking the end character in the progressbar string
+
+commit 161992a319b2b796259cef5ad535855e2b44167f
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Jul 29 05:38:11 2012 -0500
+
+    Add the Travis-CI build status to the README
+
+commit b874df40b186b24553551b9646aa2a7080ea9a73
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Jul 29 05:32:29 2012 -0500
+
+    Add the Travis-CI configuration file
+
+commit f5bee9ba0c87883c9337024d40114be29c8ec633
+Merge: fc6c205 b097260
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Jul 29 04:56:26 2012 -0500
+
+    Merge branch 'better-backwards-compatibility-with-pre-1.0' into development
+    
+    * better-backwards-compatibility-with-pre-1.0:
+      Update the other deprecation warnings outside of `ProgressBar::Base`
+      Add the remaining method deprecation/warning messages
+      Use a little metaprogramming to further dry up the deprecation messages
+      fixup! c3e6991988107ab45ac3dac380750b287db3bc2e
+      When displaying deprecation warnings for methods, only show them one time; not every time the method is invoked
+      Dry up the warning messages in `ProgressBar::Depreciable`
+      Move `ProgressBar::Base#backwards_compatible_args_to_options_conversion` to the `ProgressBar::Depreciable` module
+      Add a new `ProgressBar::Depreciable` module to encapsulate all of the deprecation logic
+      Forgot to return the `options` hash from `ProgressBar::Base#backwards_compatible_args_to_options_conversion`
+      Add the old `bar_mark=` method back so it's more backwards compatible
+      Update deprecation warnings to expire June 30th, 2013 instead of October 30th, 2013
+      Update the README to reflect the new syntax for creating a ProgressBar
+      Override `ProgressBar.new` and remain backward compatible with the pre-1.0 versions of the gem
+      Convert the `ProgressBar` module to a class so that we can...
+
+commit b09726015cc4085a99839a4358b476528ffa7ab8
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Jul 29 04:20:34 2012 -0500
+
+    Update the other deprecation warnings outside of `ProgressBar::Base`
+
+commit 0bb641f05c25b38d1f1e76e27526bdd1b1657e73
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Jul 29 04:09:24 2012 -0500
+
+    Add the remaining method deprecation/warning messages
+
+commit 7a33c3a69abbb99d51667aec91246b1a80270643
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Jul 29 04:08:49 2012 -0500
+
+    Use a little metaprogramming to further dry up the deprecation messages
+
+commit b0de1d70dd15ce876c79a7f677278e116b39ca5a
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Jul 29 04:07:11 2012 -0500
+
+    fixup! c3e6991988107ab45ac3dac380750b287db3bc2e
+
+commit 6089324f040bcd804c74afb3267e3355c9dcc4be
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Jul 29 03:27:34 2012 -0500
+
+    When displaying deprecation warnings for methods, only show them one time; not every time the method is invoked
+
+commit 0ad10a44cf0f760e8fc65dc851dddbbe0f82192f
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Jul 29 03:22:35 2012 -0500
+
+    Dry up the warning messages in `ProgressBar::Depreciable`
+
+commit 4569c04b09b8fb1e6c7cafb5ce172ab05faaf7cd
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Jul 29 03:13:09 2012 -0500
+
+    Move `ProgressBar::Base#backwards_compatible_args_to_options_conversion` to the `ProgressBar::Depreciable` module
+
+commit 6b7b433fde40753d548ff08edbd1e204865cc000
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Jul 29 02:53:10 2012 -0500
+
+    Add a new `ProgressBar::Depreciable` module to encapsulate all of the deprecation logic
+
+commit be62f753c64d804a9d56daeff6bf1efde10159b9
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Jul 29 02:44:40 2012 -0500
+
+    Forgot to return the `options` hash from `ProgressBar::Base#backwards_compatible_args_to_options_conversion`
+
+commit 12fb44592d1c65cbe994a7a6a2f5c2bcd1b95977
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Jul 29 02:43:31 2012 -0500
+
+    Add the old `bar_mark=` method back so it's more backwards compatible
+
+commit 7fff7327e07608afe7f300d9632a3b60cb970883
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Jul 29 02:20:36 2012 -0500
+
+    Update deprecation warnings to expire June 30th, 2013 instead of October 30th, 2013
+
+commit abbe8b4f3a511694e0ba0c70ea06e164624342fe
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Jul 29 02:14:22 2012 -0500
+
+    Update the README to reflect the new syntax for creating a ProgressBar
+
+commit 8809f6e3d538e2693fc509297b74de21b8076120
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Jul 29 02:13:28 2012 -0500
+
+    Override `ProgressBar.new` and remain backward compatible with the pre-1.0 versions of the gem
+
+commit 3a03ccc5b12c0db3ee5f58bfe9616e255702e03c
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Jul 29 02:12:34 2012 -0500
+
+    Convert the `ProgressBar` module to a class so that we can...
+
+commit fc6c2054f880d6a7609ff48eb955b39de1f0f0b9
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Jul 29 04:12:24 2012 -0500
+
+    Add `ProgressBar::Base#progress` and `#total`
+
+commit ac46e4eda7cc7dceb613f248120dfa5d1db07dce
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Jul 29 02:28:37 2012 -0500
+
+    Version Bump for easier testing
+    
+    Conflicts:
+    	lib/progress_bar/version.rb
+
+commit 9dfd7c0aedd2e51016b11d4cb29e714d1fa95832
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Jul 29 02:15:21 2012 -0500
+
+    Update the gemspec
+
+commit 2be94496d601db149e4faba37308eed8e537cc59
+Merge: 303fcc4 510b6ca
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Jul 29 01:27:16 2012 -0500
+
+    Merge branch 'add-smoothing-to-progressables' into development
+    
+    * commit '510b6cacdbe7508b6ef06ea63de119f17b346c60':
+      Update the `EstimatedTimer` specs when smoothing is turned off such that the `#decrement` spec is sufficiently different from the smoothing on `#decrement` spec
+      Update `EstimatedTimer` specs when smoothing is turned off to be more consistent with the new smoothing specs
+      Add `EstimatedTimer` specs to test when smoothing is turned on
+      Update the spec text for the `EstimatedTimer` class so that it doesn't contain the actual expected value but rather the general expectation
+      Whitespace
+      Extract `smoothing` into its own `let` variable
+      Add notes to the README about smoothing
+      Invert the smoothing value such that 0.0 is no smoothing and 1.0 is maximum smoothing
+      Set the default smoothing value to 0.9
+      Convert the `EstimatedTime#estimated_seconds_remaining` over to using the running average
+      Tell the `Progressable` module to update the running average any time the `progress` is set
+      Add the notion of a `smoothing` variable to the `Progressable` module for use when calculating the running average
+      Introduce `Progressable#running_average` and reset it any time `Progressable#start` is called
+      Add a RunningAverageCalculator so we can offload the logic for calculating running averages in our Progressables
+
+commit 510b6cacdbe7508b6ef06ea63de119f17b346c60
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Jul 29 01:14:57 2012 -0500
+
+    Update the `EstimatedTimer` specs when smoothing is turned off such that the `#decrement` spec is sufficiently different from the smoothing on `#decrement` spec
+
+commit 1b9e9622f3bb86f902ba81a4ac976a6ddbeabb99
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Jul 29 01:13:57 2012 -0500
+
+    Update `EstimatedTimer` specs when smoothing is turned off to be more consistent with the new smoothing specs
+
+commit 53feed9ef72de32b424f19e918bf1f93183e378e
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Jul 29 01:13:03 2012 -0500
+
+    Add `EstimatedTimer` specs to test when smoothing is turned on
+
+commit 3d548794d20c28adc384e40748d4b0e801e04a8a
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Jul 29 01:11:28 2012 -0500
+
+    Update the spec text for the `EstimatedTimer` class so that it doesn't contain the actual expected value but rather the general expectation
+
+commit 92f332985e6a5c66e693348458b6ac7082484bf1
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Jul 29 00:51:50 2012 -0500
+
+    Whitespace
+
+commit 71a5be4d3fa49d1f6468fe88e3ed47aa35a65f03
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Jul 29 00:51:08 2012 -0500
+
+    Extract `smoothing` into its own `let` variable
+
+commit 84fd06cd1fe9214f04c8120b70aba721fcaa1578
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Jul 29 00:28:21 2012 -0500
+
+    Add notes to the README about smoothing
+
+commit ada6eaef810735406641ea317f1efe85d0c662c0
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat Jul 28 23:37:40 2012 -0500
+
+    Invert the smoothing value such that 0.0 is no smoothing and 1.0 is maximum smoothing
+
+commit 2f8aaa4863b6b9ae507722cc0b26d803ae6ee76e
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat Jul 28 23:11:48 2012 -0500
+
+    Set the default smoothing value to 0.9
+
+commit 8d056b6889ac6bc263b854829e45ff6a77ebc727
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat Jul 28 22:48:20 2012 -0500
+
+    Convert the `EstimatedTime#estimated_seconds_remaining` over to using the running average
+
+commit 7ef9b477dfb740614f0823f0ee18e6cfc3185e8d
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat Jul 28 20:19:39 2012 -0500
+
+    Tell the `Progressable` module to update the running average any time the `progress` is set
+
+commit 917e57add8ff133f6d2e9b52ab6cbc6a113130d5
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat Jul 28 20:15:59 2012 -0500
+
+    Add the notion of a `smoothing` variable to the `Progressable` module for use when calculating the running average
+
+commit 21d536a2ab98a4d47d35dedb0a12be6db053d7ce
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat Jul 28 20:00:38 2012 -0500
+
+    Introduce `Progressable#running_average` and reset it any time `Progressable#start` is called
+
+commit c871e323bf1a9aff2cf311cb5c046c6cb3bdbba3
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat Jul 28 19:21:54 2012 -0500
+
+    Add a RunningAverageCalculator so we can offload the logic for calculating running averages in our Progressables
+
+commit 303fcc4a6b175c78f10faf2c4e3e0362c053e6cd
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat Jul 28 19:20:39 2012 -0500
+
+    Whitespace
+
+commit 220b522ed7af17ee2d7667784c296a5eb0b692b7
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat Jul 28 20:49:16 2012 -0500
+
+    Always refer to `total` using the accessor rather than the instance variable
+
+commit 1e9a1d013c784497002f60db9819cdcbcbead7c3
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat Jul 28 20:42:50 2012 -0500
+
+    Fix place where we were using a literal string for our time format rather than the TIME_FORMAT constant
+
+commit 9afe4b4b77f35e1f20c8817f5dd10b94dae72f21
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sun Jul 29 00:08:57 2012 -0500
+
+    Make the `Progressable` initializer optional
+
+commit 81772b27a3f9def6b37c912342ddacb9ff5b9dc3
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat Jul 28 20:41:27 2012 -0500
+
+    Fix README mistake regarding out of bounds ETAs
+
+commit 5def1057ac651b6242b2076784eec3fcefbd394f
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat Jul 28 19:58:25 2012 -0500
+
+    In Progressable, rather than accessing the starting_position instance variable, use an accessor
+
+commit 11a5f2559ae53cdf2d576ecc5553baa88013776e
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat Jul 28 19:55:50 2012 -0500
+
+    Rather than having the logic in multiple places, use `Progressable#start` where possible
+
+commit 66ccc9546e965db02ccdaa0ed9296b6773bddfd3
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat Jul 28 18:32:39 2012 -0500
+
+    Update the Progressable module to always reference the `progress` accessor rather than the instance variable
+
+commit 020e302e1892f93c7d64761c0d5e9bb449eb0994
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat Jul 28 17:12:42 2012 -0500
+
+    Add the ability to customize the bar's title in real time
+
+commit f6c64c9e89ab4a3f6afd03ccb9f59f5ab5011bbb
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat Jul 28 17:02:43 2012 -0500
+
+    Add a note to the README about customizing the bar in real time
+
+commit 5857d959f11a24d97b28ac1be5477ae0b995338a
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat Jul 28 17:02:16 2012 -0500
+
+    Add notes to the README about overriding the bar's length
+
+commit d048824cf35ddef76d1161923b089a584475d4e2
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat Jul 28 15:46:39 2012 -0500
+
+    Update the deprecation date of
+
+commit 95418668c4185de54787f641c20ffe09220439bd
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat Jul 28 15:43:36 2012 -0500
+
+    Upgrade the README to describe the new 'integrated percentage' formatting option
+
+commit bfadc2a6130fe999a978589656997bd23fca9021
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat Jul 28 15:32:27 2012 -0500
+
+    Update Ruby version in .rvmrc
+
+commit b69a1ce1c789b371cceb2a98d3967e264beb11b3
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat Jul 28 14:24:29 2012 -0500
+
+    Version Bump
+
+commit 3c6d249f55ae303f80d71bc2f3dded3f8b5276f4
+Merge: 780979e f414448
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat Jul 28 14:11:58 2012 -0500
+
+    Merge branch 'hron/fix-output-for-dumb-terminal'
+    
+    * hron-fix-output-for-dumb-terminal:
+      Replace @out.print with @out.write to work better in dumb terminal like Emacs' M-x shell.
+
+commit f414448c8820f7720ce4b345baa9c571b9e7e1b1
+Author: Aleksei Gusev <aleksei.gusev@gmail.com>
+Date:   Thu Dec 29 15:26:33 2011 +0300
+
+    Replace @out.print with @out.write to work better in dumb terminal like Emacs' M-x shell.
+
+commit 780979e62b5bc69fd8c5af70980e176ef7239ed7
+Merge: 4f0984e 61ac6c0
+Author: Jeff Felchner <accounts+git@thekompanee.com>
+Date:   Sat Jul 28 13:39:08 2012 -0500
+
+    Merge branch 'add-exponential-smoothing-to-remaining-time'
+    
+    * L2G-exp-smoothing:
+      Document the smoothing attribute a little better.
+      Rewrote smoothing stuff to something better.
+      Offload handling of weird time values to format_time (isn't that its job?) ;-)
+      Added "smoothing" attribute (default 0.9). It can be set to nil to use the old ETA code.
+      Make time estimate a smoothed moving average
+
+commit 61ac6c0acf754e7e8a15e2c2e514501be9c3d55d
+Author: Larry Gilbert <larry@l2g.to>
+Date:   Thu Jan 26 10:53:24 2012 -0800
+
+    Document the smoothing attribute a little better.
+
+commit dd898546823795f32fdc96cec6bdf63794a343d9
+Author: Larry Gilbert <larry@L2G.to>
+Date:   Fri Jan 20 18:00:52 2012 -0800
+
+    Rewrote smoothing stuff to something better.
+    
+    Rewrote #inc and #set so that the former uses the latter (DRY).
+
+commit e240cf0d33b938041297b82062b5402c2c5ac6d5
+Author: Larry Gilbert <larry@L2G.to>
+Date:   Fri Jan 20 17:57:36 2012 -0800
+
+    Offload handling of weird time values to format_time
+    (isn't that its job?) ;-)
+
+commit 45f9b18ab9e3cd60760400066c499f0d4abcf7ee
+Author: Larry Gilbert <larry@L2G.to>
+Date:   Wed Jan 18 12:42:45 2012 -0800
+
+    Added "smoothing" attribute (default 0.9).
+    It can be set to nil to use the old ETA code.
+
+commit 7dc690f640c6c05bee039338f6a1fcc284342033
+Author: Larry Gilbert <larry@L2G.to>
+Date:   Wed Jan 18 12:32:00 2012 -0800
+
+    Make time estimate a smoothed moving average
+
+commit be39a129e4268147f4b73b2e1655fca9ad21d5ea
+Author: Jeff Felchner <jeff@thekompanee.com>
+Date:   Sun Jan 22 02:35:30 2012 -0600
+
+    Use the inherited #initialize
+
+commit bb6e9cad933ad71afe2bbc54da8be7481a77518a
+Author: Jeff Felchner <jeff@thekompanee.com>
+Date:   Sun Jan 22 01:42:54 2012 -0600
+
+    Add a format where the bar has an integrated percentage
+
+commit 3bb60dc9ccb2d4ef694ad2af36828cf4f381b453
+Author: Jeff Felchner <jeff@thekompanee.com>
+Date:   Sun Jan 22 01:42:32 2012 -0600
+
+    Whitespace
+
+commit 8a7f8a652ab7b4a5490f62c69977562ca0896b7b
+Author: Jeff Felchner <jeff@thekompanee.com>
+Date:   Sun Jan 22 01:42:06 2012 -0600
+
+    Just always run all specs
+
+commit 61f4af5f695adf825638f408315fa772bf649663
+Author: Jeff Felchner <jeff@thekompanee.com>
+Date:   Sat Jan 21 20:21:39 2012 -0600
+
+    Alias stopped? to paused?
+
+commit 53ecc961d98fd41adec797b90ed7e61c3b7baa4b
+Author: Jeff Felchner <jeff@thekompanee.com>
+Date:   Sat Jan 21 20:21:16 2012 -0600
+
+    If the bar is completed, show the elapsed time, otherwise show the estimated time
+
+commit 30c51885b04b5270c1e4af8f1d610070f9ebe9f9
+Author: Jeff Felchner <jeff@thekompanee.com>
+Date:   Sat Jan 21 20:17:39 2012 -0600
+
+    estimated_time to estimated_time_with_no_oob
+
+commit 5ddcbbe61552223917b3d38058232de9fa12c6cf
+Author: Jeff Felchner <jeff@thekompanee.com>
+Date:   Sat Jan 21 19:56:58 2012 -0600
+
+    Add a Guardfile
+
+commit c328bc8889f2c162f58b697da3bda2c37225750e
+Author: Jeff Felchner <jeff@thekompanee.com>
+Date:   Sat Jan 21 19:56:51 2012 -0600
+
+    Add the ability to set the progress mark at any point
+
+commit ed43c723f78bb0bbf79def5928ef8749fffdaa2e
+Author: Jeff Felchner <jeff@thekompanee.com>
+Date:   Sat Jan 21 19:56:35 2012 -0600
+
+    Upgrade RSpec in the Gemfile
+
+commit 838e241ff80e6dca6dc45cee17b41c09ff727021
+Author: Jeff Felchner <jeff@thekompanee.com>
+Date:   Sat Jan 21 19:50:26 2012 -0600
+
+    Allow :focused w/o the '=> true'
+
+commit a2a3df5687d2927565e92249f522ce7f9de9d9ba
+Author: Jeff Felchner <jeff@thekompanee.com>
+Date:   Sat Jan 21 19:50:09 2012 -0600
+
+    More gem updates. Include guard
+
+commit 174c2f4849855ebc7945a8b38c8a13ba676213ef
+Author: Jeff Felchner <jeff@thekompanee.com>
+Date:   Sat Jan 21 19:19:40 2012 -0600
+
+    Quotes
+
+commit 0b57ceefc7f5c0f1427e9719c2f128fabc41b80d
+Author: Jeff Felchner <jeff@thekompanee.com>
+Date:   Sat Jan 21 18:59:02 2012 -0600
+
+    Whitespace
+
+commit 175dce2bc515e16a7d6afd61202265703b0b5d27
+Author: Jeff Felchner <jeff@thekompanee.com>
+Date:   Sat Jan 21 18:58:55 2012 -0600
+
+    Unindent private methods
+
+commit cc54e174d485c99a62e1165a5a1bc3f5ed0b920e
+Author: Jeff Felchner <jeff@thekompanee.com>
+Date:   Sat Jan 21 18:45:06 2012 -0600
+
+    And again
+
+commit 1b95dff506b0dc29a38f5a143cb2b51bc41097e8
+Author: Jeff Felchner <jeff@thekompanee.com>
+Date:   Sat Jan 21 18:44:10 2012 -0600
+
+    Consistency is key
+
+commit 95ce07cbbcd6f7423f75bd38bb73e3af4786a058
+Author: Jeff Felchner <jeff@thekompanee.com>
+Date:   Sat Jan 21 18:44:00 2012 -0600
+
+    And again
+
+commit 15c69f163e7d3489a01bdcdf1abdbb46e08ee33a
+Author: Jeff Felchner <jeff@thekompanee.com>
+Date:   Sat Jan 21 18:40:48 2012 -0600
+
+    Change to new date and repo
+
+commit c69e33181cc8ac24f053d23e3c2b632d0fc1278c
+Author: Jeff Felchner <jeff@thekompanee.com>
+Date:   Sat Jan 21 18:40:36 2012 -0600
+
+    Upgraded RSpec uses RSpec not Rspec
+
+commit e9b60e005b65cffe6581ba89f783e5beab3a95e7
+Author: Jeff Felchner <jeff@thekompanee.com>
+Date:   Sat Jan 21 18:40:24 2012 -0600
+
+    Not sure why I did this here
+
+commit 853cc1d0c9e65bbe14d61c95e0c297365fb8ddae
+Author: Jeff Felchner <jeff@thekompanee.com>
+Date:   Sat Jan 21 18:35:54 2012 -0600
+
+    Upgrade RSpec and SimpleCov
+
+commit 0a16ef873c6d3b18babccb7070059f41a9748672
+Author: Jeff Felchner <jeff@thekompanee.com>
+Date:   Sat Jan 21 18:35:30 2012 -0600
+
+    Bump Ruby version to 1.9.3
+
+commit 4f0984e30d998a8758495c7d4ffd359e42c13ac8
+Merge: 4283f72 9584d70
+Author: Nathan Weizenbaum <nex342@gmail.com>
+Date:   Thu Jan 19 10:29:17 2012 -0800
+
+    Merge pull request #12 from garaio/customizable_title_width
+    
+    offer a simple way to customize the #title_width
+
+commit 9584d70a4109e932c50837076ff50b17bc80c202
+Author: Yves Senn <yves.senn@garaio.com>
+Date:   Thu Jan 19 16:04:50 2012 +0100
+
+    allow to customize the #title_width
+
+commit 298c6bb4bc688e014a0fa5e627ccbbc8080f09ba
+Author: Yves Senn <yves.senn@garaio.com>
+Date:   Thu Jan 19 16:04:20 2012 +0100
+
+    removed trailing whitespace
+
+commit 4283f72f95bb976d3299cfe44fad3925717d3148
+Merge: 57faefc f551440
+Author: Nathan Weizenbaum <nex342@gmail.com>
+Date:   Fri Dec 16 12:25:45 2011 -0800
+
+    Merge pull request #10 from jim/optional-tty
+    
+    Compatibility with non-tty devices
+
+commit f551440f809fabe0c6ab118a8342c003f8cdb5bf
+Author: Jim Benton <jim@autonomousmachine.com>
+Date:   Fri Dec 16 14:19:10 2011 -0600
+
+    Detect whether the output device is a terminal, and use a simplified output strategy when it is not.
+    
+    Use IO.tty? to make this determination.
+    
+    This is really only useful for some ProgressBars. ReverseProgressBar and using
+    file_transfer_mode don't make much sense when writing to a non-terminal device.
+
+commit b565accffcb77b59ed233e312bd8940d4723c7b8
+Author: Jim Benton <jim@autonomousmachine.com>
+Date:   Fri Dec 16 14:03:01 2011 -0600
+
+    Use 1.9 compatible require in test.
+
+commit 57faefc9f6a7a6e4acc1b46b02b9985f7e2d497b
+Merge: 244b39b 99941a5
+Author: Jeff Felchner <accounts+git_hub@thekompanee.com>
+Date:   Sun Sep 4 00:42:20 2011 -0700
+
+    Merge pull request #9 from cgriego/master
+    
+    Tests for Make Progressbar resistant to time mocking
+
+commit 99941a5ab858f098fd0706056e14d4fa8bb7e27f
+Author: Chris Griego <cgriego@gmail.com>
+Date:   Mon Aug 29 15:33:01 2011 -0500
+
+    Add tests for Timecop and Delorean time mocking
+
+commit 9d443e13cc8c83eec66714993a94c111ea7cd5cb
+Author: oleg dashevskii <olegdashevskii@gmail.com>
+Date:   Wed Apr 20 11:04:46 2011 +0700
+
+    Make Progressbar resistant to time mocking
+    
+    Timecop and Delorean gems are supported
+
+commit 244b39bb88fda39ff863091bef48ba1d8f9edc19
+Merge: d0f5982 4efca5e
+Author: Jeff Felchner <accounts+git_hub@thekompanee.com>
+Date:   Fri May 20 13:40:04 2011 -0700
+
+    Merge pull request #5 from leadtune/master
+    
+    Tag gems with the build date (rather than a date 2 years ago)
+
+commit 4efca5edc7bee22abee0508962056256949fa842
+Author: Tim Harper <timcharper@gmail.com>
+Date:   Fri May 20 11:47:35 2011 -0600
+
+    Automatically tag gem builds as Date.today
+    
+    When you build a gem, the gemspec is evaluated and re-serialized. All
+    dynamic values become static, once again. (for evidence of this, compare
+    ruby-progressbar.gemspec with the installed gemspec in your rubygems
+    folder.  Also, if you untar a gem with xzf, and examine metadata.gz,
+    you'll see the gemspec is actually stored in serialized YAML format, and
+    then converted back into a ruby format).
+    
+    Therefore, this is a safe way to automatically store the current date in
+    a gem when you invoke gem build.  Currently, it's stuck on a Feb 2009
+    date, as evidence by the rubyforge page:
+    
+    http://rubygems.org/gems/ruby-progressbar
+
+commit a01f7a87698510b31e4e2c204a2150de5ff641e0
+Author: jfelchner <jeff@thekompanee.com>
+Date:   Sun Apr 17 22:39:55 2011 -0500
+
+    Replace the Bar's instance variable references
+
+commit 2376dbdbefb125c009a6d970381da1b5fe494216
+Author: jfelchner <jeff@thekompanee.com>
+Date:   Sun Apr 17 22:22:17 2011 -0500
+
+    Remove Options Parser
+
+commit 374ae32b2c18723e5d05070cc84545fcc390b24a
+Author: jfelchner <jeff@thekompanee.com>
+Date:   Sun Apr 17 22:18:20 2011 -0500
+
+    The starting value should be passed on #start
+    
+    Instead of on instantiation
+
+commit 7d7c6a1736dc44b5610207b72996db96ebd23bb1
+Author: jfelchner <jeff@thekompanee.com>
+Date:   Sun Apr 17 22:01:46 2011 -0500
+
+    Remove Title class for now
+
+commit bc00e288742d282dc87bc412a34ed3420c0391b0
+Author: jfelchner <jeff@thekompanee.com>
+Date:   Sun Apr 17 21:59:22 2011 -0500
+
+    Change 'reversed bar' to 'mirrored bar'
+
+commit a4f6fe1cee40628bec77f72ee7ab2d4ba0d03533
+Author: jfelchner <jeff@thekompanee.com>
+Date:   Sun Apr 17 19:13:11 2011 -0500
+
+    Rename `out` to `output` and access w/o variable
+
+commit ec0499803c366b5888b67c2e4e71a30cdae89d54
+Author: jfelchner <jeff@thekompanee.com>
+Date:   Sun Apr 17 18:54:09 2011 -0500
+
+    Change default output to STDOUT
+
+commit 746e8753213f7b87aff21b6957c979b670be9c7d
+Author: jfelchner <jeff@thekompanee.com>
+Date:   Sun Apr 17 18:53:58 2011 -0500
+
+    Rename `output_stream` to `output`
+
+commit 33fbb45abb2ae6f2159e8cca6c54d40807b6df56
+Author: jfelchner <jeff@thekompanee.com>
+Date:   Sun Apr 17 18:48:27 2011 -0500
+
+    Rename `current` to `progress`
+
+commit b68bcec1a85f04c250512db657aef980cd848886
+Author: jfelchner <jeff@thekompanee.com>
+Date:   Sun Apr 17 18:18:22 2011 -0500
+
+    Update README
+
+commit f205a32fe6e5436f14916e0a750a07b5e8c9b6fc
+Author: jfelchner <jeff@thekompanee.com>
+Date:   Sun Apr 17 18:16:40 2011 -0500
+
+    Add #decrement to the progress bar
+
+commit b29930a1eb925fa0705b92a9a01f142b38492cc0
+Author: jfelchner <jeff@thekompanee.com>
+Date:   Sun Apr 17 18:16:11 2011 -0500
+
+    Backwards compatibility for instantiation
+
+commit fc067d89c7058b1ee2d3d3825faca5a0ea2fe42f
+Author: jfelchner <jeff@thekompanee.com>
+Date:   Sun Apr 17 15:29:59 2011 -0500
+
+    Create `with_timers` helper
+
+commit e538bd633a7888a43d32e52c95de1536d6c3f063
+Author: jfelchner <jeff@thekompanee.com>
+Date:   Sun Apr 17 15:29:43 2011 -0500
+
+    Update spec_helper with new root gem file
+
+commit 8607087e5ab371d80182a8ea423b831abb9a69c7
+Author: jfelchner <jeff@thekompanee.com>
+Date:   Sun Apr 17 15:29:24 2011 -0500
+
+    Update gemspec with new license file
+
+commit 675003294d36c72eec013027c7b028d7b47dd477
+Author: jfelchner <jeff@thekompanee.com>
+Date:   Sun Apr 17 15:29:13 2011 -0500
+
+    Update gemspec to auto-update Date
+
+commit eeeed76dba2afe42cfd194b4ac40481f9ba7aac5
+Author: jfelchner <jeff@thekompanee.com>
+Date:   Sun Apr 17 15:28:47 2011 -0500
+
+    Add deprecation and backwards compatibility helprs
+
+commit f02435319427d38f8b4faba8ffe0628b9a104bd0
+Author: jfelchner <jeff@thekompanee.com>
+Date:   Sun Apr 17 15:28:02 2011 -0500
+
+    Add SimpleCov to the project
+
+commit 7cf4d34ac7826800a745f30c9d899526e27878cd
+Author: jfelchner <jeff@thekompanee.com>
+Date:   Sun Apr 17 14:54:36 2011 -0500
+
+    Rename 'beginning_position' option to 'started_at'
+
+commit d730817386ff0cfe65b7d5cdc4e312f82c8fe753
+Author: jfelchner <jeff@thekompanee.com>
+Date:   Sun Apr 17 14:54:11 2011 -0500
+
+    Fix require files
+
+commit 18f7b8c3638e9c29acb3d8f4f6bbf958131d13bc
+Author: jfelchner <jeff@thekompanee.com>
+Date:   Sun Apr 17 13:56:42 2011 -0500
+
+    Update README
+
+commit fa7a4c1c6ec819afb4643342a299beb2b050b902
+Author: jfelchner <jeff@thekompanee.com>
+Date:   Sun Apr 17 13:48:17 2011 -0500
+
+    Update README
+
+commit 36d4254d7342b9662aa04a2f36ee0ac80b7d0663
+Author: jfelchner <jeff@thekompanee.com>
+Date:   Sun Apr 17 13:12:39 2011 -0500
+
+    Update README
+
+commit f0f647224fda2e2806348e54ea151a77472595d0
+Author: jfelchner <jeff@thekompanee.com>
+Date:   Sun Apr 17 13:12:28 2011 -0500
+
+    Remove Test::Unit test cases which are covered
+
+commit f55e8d54007b98423ca3ae2a81070b62a121c36f
+Author: jfelchner <jeff@thekompanee.com>
+Date:   Sun Apr 17 13:11:55 2011 -0500
+
+    Replace licenses with the MIT license
+
+commit 82dd22750b7264e5c908446eb40183723cbbf35c
+Author: jfelchner <jeff@thekompanee.com>
+Date:   Sun Apr 17 12:15:20 2011 -0500
+
+    Begin updating README
+
+commit 523d7954335676d154437ba50bf62b65b5833d2d
+Author: jfelchner <jeff@thekompanee.com>
+Date:   Sun Apr 17 12:15:02 2011 -0500
+
+    Add .gitignore
+
+commit d0f5982acbb9e8f70c3b774b8c4c3d0980439957
+Merge: 86d1d40 883efa8
+Author: jfelchner <jeff@thekompanee.com>
+Date:   Sun Apr 17 12:00:37 2011 -0500
+
+    Merge branch 'hotfix/0.0.10'
+
+commit 883efa841504589c9c69201c259d355f0604c579
+Author: jfelchner <jeff@thekompanee.com>
+Date:   Sun Apr 17 11:59:29 2011 -0500
+
+    Fix Version Bump
+    
+    The gemspec and the class had 2 different version numbers.
+    The gemspec one was obviously correct.  Fixing with this commit.
+
+commit 86d1d4068982ae07b5211ca82b07c2f415cb29e8
+Merge: 0aa81de f99f0cf
+Author: jfelchner <jeff@thekompanee.com>
+Date:   Sun Apr 17 00:44:16 2011 -0500
+
+    Merge branch 'hotfix/0.9.1'
+
+commit f99f0cfc4438f319a17e7c7e24ca500a1dab25cf
+Author: jfelchner <jeff@thekompanee.com>
+Date:   Sun Apr 17 00:38:39 2011 -0500
+
+    Version Bump
+
+commit d04053bd1ddd8c52c979f3d52d3b790e3406ca59
+Author: Gonzalo Fernandez <gonzalo.fernandez@crowdint.com>
+Date:   Tue Mar 1 09:18:29 2011 -0600
+
+    Fix 'ArgumentError: negative argument' when using with Spork
+
+commit dc6950f6ca66d40610d71416eb9291f6fbc30f94
+Author: jfelchner <jeff@thekompanee.com>
+Date:   Sat Apr 16 16:11:47 2011 -0500
+
+    Bar can be forcibly stopped
+
+commit 61eceb268cf2f7a049908a765023675906e67968
+Author: jfelchner <jeff@thekompanee.com>
+Date:   Sat Apr 16 15:50:29 2011 -0500
+
+    Autostart for now
+
+commit d72546944a1c97874e9104b3b100f139f936c029
+Author: jfelchner <jeff@thekompanee.com>
+Date:   Sat Apr 16 15:50:04 2011 -0500
+
+    Add ability to pause/resume progress bar
+
+commit 581af9d225fb518a9bc7c944c96b553a83b49ce8
+Author: jfelchner <jeff@thekompanee.com>
+Date:   Sat Apr 16 15:25:17 2011 -0500
+
+    Bar resets the elapsed time when reset.
+
+commit e1ecb376056eda27241c6a48a26b3af3db849c8e
+Author: jfelchner <jeff@thekompanee.com>
+Date:   Sat Apr 16 15:22:17 2011 -0500
+
+    Bar resets the estimated time when reset.
+
+commit dc4420e38fcea6748db96f144b25dafcb7848775
+Author: jfelchner <jeff@thekompanee.com>
+Date:   Sat Apr 16 15:17:30 2011 -0500
+
+    Timers can now be reset
+
+commit f5158dd5ad2af9fec350468cdf29128d65fcb187
+Author: jfelchner <jeff@thekompanee.com>
+Date:   Sat Apr 16 15:00:20 2011 -0500
+
+    #start determines #reset position
+
+commit 4a056a9f6d033331a5567c4cbd951e01f214c722
+Author: jfelchner <jeff@thekompanee.com>
+Date:   Sat Apr 16 11:40:01 2011 -0500
+
+    On #reset, bar goes back to its starting position
+
+commit 96748c35d0b1eeae4691d3dee6ce291a26b821e4
+Author: jfelchner <jeff@thekompanee.com>
+Date:   Sat Apr 16 11:32:57 2011 -0500
+
+    Bar can be reset back to 0
+
+commit 3bbb1f2956334ec011072efeb1a04b1aadec9365
+Author: jfelchner <jeff@thekompanee.com>
+Date:   Wed Apr 13 23:05:00 2011 -0500
+
+    Fix test typo
+
+commit 7ac7712e0895e09ac112e87ac94d19d4dcacb66e
+Author: jfelchner <jeff@thekompanee.com>
+Date:   Wed Apr 13 22:59:54 2011 -0500
+
+    Fix tests
+
+commit e6af0811a1f5277909833f17fae0c129c7c6f9af
+Author: jfelchner <jeff@thekompanee.com>
+Date:   Wed Apr 13 22:59:40 2011 -0500
+
+    Reminder for autostart
+
+commit 1ae7936d2caaa06d468fd8dc47c342a0064b698e
+Author: jfelchner <jeff@thekompanee.com>
+Date:   Wed Apr 13 22:59:23 2011 -0500
+
+    Move #title
+
+commit f393d8cb0ac1cbbd1cf04d451ecc566939963d2f
+Author: jfelchner <jeff@thekompanee.com>
+Date:   Wed Apr 13 22:59:11 2011 -0500
+
+    Delete unneeded code
+
+commit 2507c9be118cdbb164f0575d5946c83195395f10
+Author: jfelchner <jeff@thekompanee.com>
+Date:   Wed Apr 13 22:44:58 2011 -0500
+
+    Stop Elapsed Timer on finish
+
+commit eae8cd376aba86f5bf1fa92bc2e61325b193f309
+Author: jfelchner <jeff@thekompanee.com>
+Date:   Wed Apr 13 22:41:13 2011 -0500
+
+    Progressable components finish properly
+
+commit bda0f4ddbae9d17753e9e197a3d95005274d3ab0
+Author: jfelchner <jeff@thekompanee.com>
+Date:   Wed Apr 13 21:58:09 2011 -0500
+
+    Refactor out common 'Progressable' functionality
+
+commit 0b7f6cc2a007514a9f0765925584f1cecf7525b0
+Author: jfelchner <jeff@thekompanee.com>
+Date:   Wed Apr 13 21:11:15 2011 -0500
+
+    Prepare for more 'finish' functionality
+
+commit 1b08097f32b5f29c13033852d22559144a7a01f4
+Author: jfelchner <jeff@thekompanee.com>
+Date:   Wed Apr 13 21:10:05 2011 -0500
+
+    Refactor common Timer functionality into a module
+
+commit 40d5daef1e72a2772bf103dcb61a14d51579eab0
+Author: jfelchner <jeff@thekompanee.com>
+Date:   Wed Apr 13 19:20:05 2011 -0500
+
+    Bar outputs a \n when it's finished
+
+commit 933f8794fdfa1f545eff6ffc7abf48599d441017
+Author: jfelchner <jeff@thekompanee.com>
+Date:   Wed Apr 13 19:19:31 2011 -0500
+
+    Bar can now be "finished"
+
+commit 115ae6ef8356842204c56bcbcc547a3e02e4b6be
+Author: jfelchner <jeff@thekompanee.com>
+Date:   Wed Apr 13 17:50:52 2011 -0500
+
+    Remove unnecessary (for now) code
+
+commit 811d7b7630ac7762f8aef95cbef6a8f4dce3185f
+Author: jfelchner <jeff@thekompanee.com>
+Date:   Wed Apr 13 17:27:04 2011 -0500
+
+    Resizing algorithm is much smarter
+    
+    Doesn't cause artifacting when the screen is resized.
+
+commit b8df6ea38786f12591a41b32c4d22ee182543cde
+Author: jfelchner <jeff@thekompanee.com>
+Date:   Wed Apr 13 16:34:59 2011 -0500
+
+    Fix length_changed? check
+
+commit ef3079b538a82bf02bea5f919c2aa860b458e3f5
+Author: jfelchner <jeff@thekompanee.com>
+Date:   Wed Apr 13 16:34:42 2011 -0500
+
+    Move formatting methods and make them private
+
+commit 895a83272dcfb5a015f2ff1ad81f0ae4711642cc
+Author: jfelchner <jeff@thekompanee.com>
+Date:   Wed Apr 13 16:34:00 2011 -0500
+
+    Create #inspect method
+
+commit 38c36948ada2fb73b26cefe19f5ed7b6c4fa39dc
+Author: jfelchner <jeff@thekompanee.com>
+Date:   Wed Apr 13 16:33:42 2011 -0500
+
+    Remove implemented methods
+
+commit 746717b3480e7fee15875ecc3efee651a191251b
+Author: jfelchner <jeff@thekompanee.com>
+Date:   Wed Apr 13 16:22:49 2011 -0500
+
+    We have a LICENSE file. No need for this.
+
+commit 8a8880155a4791dcae1b763235b8a95755b717a0
+Author: jfelchner <jeff@thekompanee.com>
+Date:   Wed Apr 13 16:20:08 2011 -0500
+
+    Fix output problem
+
+commit 84371ebd862009d944e0ac4613b03d3fe74e0098
+Author: jfelchner <jeff@thekompanee.com>
+Date:   Wed Apr 13 16:16:40 2011 -0500
+
+    Always show 2 decimal places with precise percentage
+
+commit 55b8d0f9afa7f6492cb8f5197b416586418e40f8
+Author: jfelchner <jeff@thekompanee.com>
+Date:   Wed Apr 13 16:16:12 2011 -0500
+
+    Elapsed Time works properly with progress bar
+
+commit 3f5b5e1da4841a413518d608545474516c223b1f
+Author: jfelchner <jeff@thekompanee.com>
+Date:   Wed Apr 13 16:15:46 2011 -0500
+
+    Estimated Timer works properly with progress bar
+
+commit 4adf1b2ab322e9ddb346e0f180b2438ecc138c80
+Author: jfelchner <jeff@thekompanee.com>
+Date:   Wed Apr 13 15:02:14 2011 -0500
+
+    %r format string works properly
+
+commit 0ce3b4c6848f3757e82f43097d8567eac5e9baa9
+Author: jfelchner <jeff@thekompanee.com>
+Date:   Wed Apr 13 14:55:39 2011 -0500
+
+    Estimated Timer can now be incremented
+
+commit 5b8050bce1f06785d2a764afd081840a96ef7978
+Author: jfelchner <jeff@thekompanee.com>
+Date:   Wed Apr 13 14:54:59 2011 -0500
+
+    Bar graphic can now be reversed
+
+commit c93bbdfd548277bf6026e51d99e284c13da701f9
+Author: jfelchner <jeff@thekompanee.com>
+Date:   Wed Apr 13 14:10:40 2011 -0500
+
+    Remove method arguments from molecule
+
+commit 29dd5b7cbc6baa91481d159cb0c74543781565c9
+Author: jfelchner <jeff@thekompanee.com>
+Date:   Wed Apr 13 12:49:22 2011 -0500
+
+    %e, %E and %f format the estimated time correctly
+
+commit ea925611cda20518dd8a728c825bed4b450f0e52
+Author: jfelchner <jeff@thekompanee.com>
+Date:   Wed Apr 13 12:48:39 2011 -0500
+
+    Formatting
+
+commit bb385c131c233eb0345b40bbad0c8d358bffe7c6
+Author: jfelchner <jeff@thekompanee.com>
+Date:   Wed Apr 13 12:24:24 2011 -0500
+
+    Include Molecule specs
+
+commit a8ea4c9bb22e21258699b5b1f7ff2a0399a373c3
+Author: jfelchner <jeff@thekompanee.com>
+Date:   Wed Apr 13 11:32:39 2011 -0500
+
+    Estimated Timer works with out of bounds times
+
+commit ae23510e1aacb56ce6ecc10ce6c78032fb46e91a
+Author: jfelchner <jeff@thekompanee.com>
+Date:   Mon Apr 11 23:03:17 2011 -0500
+
+    Estimated Timer displays estimated time correctly
+
+commit e6529d97733b69d3e5f7f9eaa5152d9663ab27d4
+Author: jfelchner <jeff@thekompanee.com>
+Date:   Mon Apr 11 22:54:17 2011 -0500
+
+    Estimated Timer displays unknown time remaining
+
+commit cd2494e10aa2a01bfc409f814208ffbac2a92ea7
+Author: jfelchner <jeff@thekompanee.com>
+Date:   Mon Apr 11 22:14:26 2011 -0500
+
+    Estimated Time can now be displayed
+
+commit f37151d816a65357dcb9409fc5c1aecf82271b34
+Author: jfelchner <jeff@thekompanee.com>
+Date:   Mon Apr 11 20:56:41 2011 -0500
+
+    Make Timer work properly
+
+commit 481d6793fe5706b73a21f66b85a0e939e0dd2ed3
+Author: jfelchner <jeff@thekompanee.com>
+Date:   Mon Apr 11 20:56:15 2011 -0500
+
+    Move bar_spec to the proper locale
+
+commit 089f71d6f23b9c5673efad081c200fe43c771ecb
+Author: jfelchner <jeff@thekompanee.com>
+Date:   Mon Apr 11 20:12:03 2011 -0500
+
+    Elapsed Time can now be displayed
+
+commit e585c194104ba7a20b3e3321411429d17059ab18
+Author: jfelchner <jeff@thekompanee.com>
+Date:   Mon Apr 11 20:11:35 2011 -0500
+
+    Percentage information can now be displayed
+
+commit 3c8e12cb0138dde823acb9101f59f23df222334f
+Author: jfelchner <jeff@thekompanee.com>
+Date:   Mon Apr 11 17:04:49 2011 -0500
+
+    Capacity information can now be displayed
+
+commit b66e0eb394f801e36177013ee7237cbfeb940958
+Author: jfelchner <jeff@thekompanee.com>
+Date:   Mon Apr 11 16:47:48 2011 -0500
+
+    Move Bar and Title into Components submodule
+
+commit 322a07ffc9177e92da17da5565ba8d0c795fe4b9
+Author: jfelchner <jeff@thekompanee.com>
+Date:   Mon Apr 11 16:35:34 2011 -0500
+
+    Base refactoring work laid out
+
+commit d3b1ea160359e03352c2cf696c7d3f33a383b656
+Author: jfelchner <jeff@thekompanee.com>
+Date:   Mon Apr 11 16:35:10 2011 -0500
+
+    Add RSpec support files
+
+commit dd577b6f7db27a3cbeb7388e77009dc2fde30d53
+Author: jfelchner <jeff@thekompanee.com>
+Date:   Mon Apr 11 16:34:37 2011 -0500
+
+    Create a Gemfile and other infrastructure files
+
+commit e9ccb30ad85c23f7df243b730524e505f9e388da
+Author: jfelchner <jeff@thekompanee.com>
+Date:   Mon Apr 11 16:33:43 2011 -0500
+
+    Update gemspec
+
+commit 0aa81dec105b897862ea4b02f42147cb1f9e4657
+Author: Laust Rud Jacobsen <rud@personal-it.dk>
+Date:   Thu Feb 25 16:07:32 2010 +0100
+
+    Fix to failing test: Adjusting the path to progressbar.rb file
+
+commit e2b1edd4ff06b6a077b8503aacfa36dc2c3aadda
+Author: daigoro <bee.daigoro@gmail.com>
+Date:   Mon Jul 27 21:58:11 2009 +0200
+
+    accessor for alternate bar mark
+
+commit b53e8265de8545a45dd9dc49c13ea40b5c321158
+Author: Ryan Wood <ryan.wood@gmail.com>
+Date:   Wed Jun 17 10:01:05 2009 -0400
+
+    Updated gem name to match project (so it would build)
+
+commit a0bccb202116643f645883e2bd116793192054ed
+Author: Nathan Weizenbaum <nex342@gmail.com>
+Date:   Mon Feb 16 13:56:51 2009 -0800
+
+    Add a gemspec.
+
+commit 51f22a8449f54e0cda9b6179c1eeb6ad03fcccf5
+Author: Nathan Weizenbaum <nex342@gmail.com>
+Date:   Mon Feb 16 13:54:21 2009 -0800
+
+    Move progressbar.rb into lib/.
+
+commit e8a774b4e608137691d65c32dd8c9e36fcb1700f
+Author: Nathan Weizenbaum <nex342@gmail.com>
+Date:   Mon Feb 16 13:44:29 2009 -0800
+
+    Add LICENSE files.
+
+commit dc3975b7919dd83a5120c887a5aebb9384009518
+Author: Nathan Weizenbaum <nex342@gmail.com>
+Date:   Mon Feb 16 13:42:08 2009 -0800
+
+    Get rid of the ChangeLog. That's what revision logs are for.
+
+commit f24e17a803b41c0e012254415b846157a0a5e157
+Author: Nathan Weizenbaum <nex342@gmail.com>
+Date:   Mon Feb 16 13:40:59 2009 -0800
+
+    Make the readme use Markdown.
+    
+    Also get rid of the Japanese readme - I won't be able to maintain that.
+
+commit 7b1c474983158a00c88519d699c167a3789062c4
+Author: Satoru Takabayashi <satoru@namazu.org>
+Date:   Mon Feb 16 13:28:57 2009 -0800
+
+    Initial commit (based on Ruby/ProgressBar 0.9).
