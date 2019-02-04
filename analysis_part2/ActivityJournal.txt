@@ -1,0 +1,192 @@
+
+SWEN-250 Document Analysis Journal
+
+Implement these functions in the order below.
+
+Your name: Prionti Nasir
+
+================================================================
+process_word
+Start 
+Estimated Time	07 00
+Plan: - Read the doc before starting 
+      - Be consistent with linked_list_functions and remember to use 
+        it in further code
+      - Write code following the step-by-step doc given
+      - Compile and fix errors
+      - Debug further errors
+(Order of implementation, testing approach, etc.)
+
+Complete
+Actual Time	10 00
+Observations: - This mainly took a lot of time because I was stressing over why MLK excerpt 
+              tests were giving errors for clear_linked_list. I rewrote it a lot of times
+              - Now for this function, I was getting 0 instead of 1 when the test passed in
+              an empty list. I had to stop using find_word's result and write a separate
+              test for p_list->p_head == NULL. I then added a new_node. 
+              I learned to be consistent and keep in mind all cases of  all the functions related
+              to the developing code.
+(Lessons learned, problems encountered, obstacles overcome, etc.)
+
+
+================================================================
+get_first_word
+Start 
+Estimated Time	10 10
+Plan: - Read the doc before starting
+      - Be consistent with linked_list_functions and remember to use
+        it in further code
+      - Write code following the step-by-step doc given
+      - Compile and fix errors
+      - Debug further errors
+
+(Order of implementation, testing approach, etc.)
+
+Complete
+Actual Time	10 25
+Observations:   This was easy because there was not much to figure out
+                except for following the instructions and using pointers
+                correctly.
+(Lessons learned, problems encountered, obstacles overcome, etc.)
+
+
+================================================================
+get_next_word
+Start
+Estimated Time	10 30
+Plan: - Read the doc before starting
+      - Be consistent with linked_list_functions and remember to use
+        it in further code
+      - Write code following the step-by-step doc given
+      - Compile and fix errors
+      - Debug further errors
+
+(Order of implementation, testing approach, etc.)
+
+Complete
+Actual Time	11 03
+Observations: I was getting test 20 and 21 wrong repeatedly. After trying to debug 
+              this function for a long time I realized I had to update the current 
+              pointer in both this function and the get first word function.
+(Lessons learned, problems encountered, obstacles overcome, etc.)
+
+
+================================================================
+get_last_word
+Start
+Estimated Time	11 15
+Plan  - Read the doc before starting
+      - Be consistent with linked_list_functions and remember to use
+        it in further code
+      - Write code following the step-by-step doc given
+      - Compile and fix errors
+      - Debug further errors
+(Order of implementation, testing approach, etc.)
+
+Complete       
+Actual Time	11 30
+Observations: This was done by following the instructions and running
+              the resultant code.
+(Lessons learned, problems encountered, obstacles overcome, etc.)
+
+
+================================================================
+get_prev_word
+Start
+Estimated Time	11 32
+Plan: - Read the doc before starting
+      - Be consistent with linked_list_functions and remember to use
+        it in further code
+      - Write code following the step-by-step doc given
+      - Compile and fix errors
+      - Debug further errors
+(Order of implementation, testing approach, etc.)
+
+Complete
+Actual Time	11 39
+Observations: This also was pretty straight-forward. I was confused about whether
+              the current should point to the previous or the next but it worked 
+              out fine when I used previous.
+(Lessons learned, problems encountered, obstacles overcome, etc.)
+
+
+================================================================
+read_file through test 56
+Start
+Estimated Time	11 39
+Plan: - Read the doc before starting
+      - Be consistent with linked_list_functions and remember to use
+        it in further code
+      - Write code following the step-by-step doc given
+      - Compile and fix errors
+      - Debug further errors
+(Order of implementation, testing approach, etc.)
+
+Complete
+Actual Time	12 26
+Observations: For this I had to look up how to handle file creation
+and manipulation. I also used isalpha which helped a lot and saved
+extra tests.
+(Lessons learned, problems encountered, obstacles overcome, etc.)
+
+
+================================================================
+read_file MLK_dream_excerpt only
+Start
+Estimated Time	12 30
+Plan: - Read the doc before starting
+      - Be consistent with linked_list_functions and remember to use
+        it in further code
+      - Write code following the step-by-step doc given
+      - Compile and fix errors
+      - Debug further errors
+
+(Order of implementation, testing approach, etc.)
+
+Complete
+Actual Time	12 35
+Observations: I just had to brush up on the older code.
+(Lessons learned, problems encountered, obstacles overcome, etc.)
+
+
+================================================================
+write_unique_word_list_to_csv_file
+Start
+Estimated Time	12 38
+Plan:- Read the doc before starting
+      - Be consistent with linked_list_functions and remember to use
+        it in further code
+      - Write code following the step-by-step doc given
+      - Compile and fix errors
+      - Debug further errors
+(Order of implementation, testing approach, etc.)
+
+Complete
+Actual Time	12 55
+Observations: I needed to look up file-writing in C. And I got an error 
+of invalid initializer which I could immediately detect came from doing
+FILE file instead of FILE *file.
+(Lessons learned, problems encountered, obstacles overcome, etc.)
+
+
+================================================================
+Add four unit tests to the unit_tests_student.c file
+Start
+Estimated Time	1 00
+Plan: - Read the doc before starting
+      - Be consistent with linked_list_functions and remember to use
+        it in further code
+      - Write code following the step-by-step doc given
+      - Compile and fix errors
+      - Debug further errors
+
+(Order of implementation, testing approach, etc.)
+
+Complete
+Actual Time	1 33
+Observations: I took time to learn how to write tests.
+And I had to think of what functions to use.
+(Lessons learned, problems encountered, obstacles overcome, etc.)
+
+
+================================================================
