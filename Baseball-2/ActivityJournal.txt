@@ -1,0 +1,53 @@
+SWEN-250 Activity Reflection
+Database -- SQL Practice - Relational Joins
+
+Name: Prionti Nasir
+
+================================================================
+Queries 1 through 10:
+Estimated Time	02 00
+Plan: -Look up sql joins 
+      -Implement in your queries
+      -Debug
+(Order of implementation, testing approach, etc.)
+
+Complete
+Actual Time	03 00
+Observations: It was mostly smooth except that I did it all without
+joins and then had to redo it with join because I wanted to learn
+to use it. I noticed that if I did:
+SELECT Player.name, Player.number, Player.team 
+
+FROM Player, Coach 
+
+INNER JOIN Coach ON Player.team = Coach.team 
+
+WHERE Player.position BETWEEN 7 AND 9 AND Coach.title = "Manager"  
+
+AND Coach.name LIKE "John%";
+
+I got an ambiguous column error. Is it because two instances or something
+for Coach table are created? This was solved by simply removing
+Coach from the FROM line.
+ 
+(Lessons learned, problems encountered, obstacles overcome, etc.)
+
+
+================================================================
+Queries 11 through 15 (extra credit if done):
+Estimated Time  01 00
+Plan: -Look up the functions in the hints and subqueries
+      -Implement
+      -Debug
+(Order of implementation, testing approach, etc.)
+
+Complete
+Actual Time	01 30
+Observations: I took a lot of time to learn to use subqueries
+and to use "nested" SELECT or FROM statements because SQL seems
+kind of different from usual programming languages, but I eventually
+figured it out.
+(Lessons learned, problems encountered, obstacles overcome, etc.)
+
+
+================================================================
