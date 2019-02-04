@@ -1,0 +1,93 @@
+SWEN-250 Document Analysis Journal
+
+Implement these functions in the order below.
+
+Your name: Prionti Nasir
+
+================================================================
+create_node
+Start 
+Estimated Time	01:00
+Plan: Study pointers and structs and their operations
+Write the function, compile and debug
+See if the tests pass and debug again
+(Order of implementation, testing approach, etc.)
+
+Complete 
+Actual Time	01:30
+Observations: I was getting pointers wrong all this time 
+but studying again helped to intuitively understand them better.
+Thankfully tests passed at the first go.
+(Lessons learned, problems encountered, obstacles overcome, etc.)
+
+
+================================================================
+add_node_at_head
+Start 
+Estimated Time  00:30
+Plan:Write and debug compile errors
+Debug again if tests don't work
+(Order of implementation, testing approach, etc.)
+
+Complete
+Actual Time    01:00
+Observations: Seg fault error was the hardest one to get rid of.
+Otherwise the coding part went smooth. I realised I was getting the Seg fault
+because I did not do a null check before entering the word through strlen.
+(Lessons learned, problems encountered, obstacles overcome, etc.)
+
+================================================================
+clear_linked_list
+Start 
+Estimated Time 00:30
+Plan:
+Plan:Write and debug compile errors
+Debug again if tests don't work
+(Order of implementation, testing approach, etc.)
+
+Complete
+Actual Time	00:20
+Observations: I got bus error quite a few times. Had to work on
+my code by pinpointing which unit test was failing and why. 
+I used print statements to locate what worked and what did not.
+(Lessons learned, problems encountered, obstacles overcome, etc.)
+
+
+================================================================
+add_node_after_current
+Start
+Estimated Time	01:00
+Plan:
+Write and debug compile errors
+Be sure to check for null stuff
+Debug again if tests don't work
+(Order of implementation, testing approach, etc.)
+
+Complete
+Actual Time     01:00
+Observations: This went smoothly because I worked slowly and carefully.
+Compiled at first go and passed tests.
+(Lessons learned, problems encountered, obstacles overcome, etc.)
+
+
+================================================================
+find_word
+Start
+Estimated Time	01:00
+Plan:
+Write and debug compile errors
+Be sure to check for null stuff
+Debug again if tests don't work
+
+(Order of implementation, testing approach, etc.)
+
+Complete
+Actual Time	03:00
+Observations:   I had to write the cases down and prepare
+a structure for it on paper. Then I translated it into code
+and compiled it in one go. One test failed, I reconsidered that case
+and rewrote. All tests passed!
+(Lessons learned, problems encountered, obstacles overcome, etc.)
+
+
+================================================================
